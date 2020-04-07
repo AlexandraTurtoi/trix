@@ -1,0 +1,3206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+	
+	<category>
+	    <pattern>*</pattern>
+	    <template>Nu stiu sa zic!</template>
+    </category>
+    
+    <category>
+        <pattern>Buna *</pattern>
+        <template><image>https://media.giphy.com/media/l3q2GDh3wQqVWSiGY/giphy.gif</image>
+       Buna <set name="buna"><star /></set>! Hai sa ne cunoastem!Eu sunt <bot name="name" />, tu cine esti?</template>
+    </category>
+	
+ <category>
+    <pattern>Salut</pattern>
+    <template><image>https://media.giphy.com/media/l3q2GDh3wQqVWSiGY/giphy.gif</image>
+       Buna <set name="buna"><star /></set>! Hai sa ne cunoastem!Eu sunt <bot name="name" />, tu cine esti?</template>
+    </category>
+  
+   
+  <category>
+      <pattern>Buna</pattern>
+      <template>
+          <image>https://media.giphy.com/media/l3q2GDh3wQqVWSiGY/giphy.gif</image>
+          Buna! Cum te numeÈti?</template>
+  </category>
+  	
+  	<category>
+	    <pattern>Ma numesc * </pattern>
+	    <template><image>https://media.giphy.com/media/pcLjAwQeLt4vIhRyiA/giphy.gif</image>
+	    Ma bucur sa te cunosc, <set name="nume"><star /></set>.Iti doresti sa mergi in Franta?Te pot ajuta!</template>
+    </category>
+    
+    	<category>
+	    <pattern>Numele meu este * </pattern>
+	    <template><image>https://media.giphy.com/media/pcLjAwQeLt4vIhRyiA/giphy.gif</image>
+	    Ma bucur sa te cunosc, <set name="nume"><star /></set>.Iti doresti sa mergi in Franta?Te pot ajuta!</template>
+    </category>
+    
+    	<category>
+	    <pattern>Eu sunt * </pattern>
+	    <template><image>https://media.giphy.com/media/pcLjAwQeLt4vIhRyiA/giphy.gif</image>
+	    Ma bucur sa te cunosc, <set name="nume"><star /></set>.Iti doresti sa mergi in Franta?Te pot ajuta!</template>
+    </category>
+    
+ <category>
+        <pattern>Cine sunt </pattern>
+        <template>
+            <think><set var="verificanume"><get name="nume" /></set></think> 
+            <condition var="verificanume">
+                <li value="unknown">Inca nu te-ai prezentat!</li>
+                <li>Numele tau este <get var="verificanume" />.</li>
+           </condition>
+        </template>
+    </category>
+    
+     <category>
+        <pattern>Cum ma cheama </pattern>
+        <template>
+            <think><set var="verificanume"><get name="nume" /></set></think> 
+            <condition var="verificanume">
+                <li value="unknown">Inca nu te-ai prezentat!</li>
+                <li>Numele tau este <get var="verificanume" />.</li>
+           </condition>
+        </template>
+    </category>
+    
+     <category>
+        <pattern>Care este numele meu </pattern>
+        <template>
+            <think><set var="verificanume"><get name="nume" /></set></think> 
+            <condition var="verificanume">
+                <li value="unknown">Inca nu te-ai prezentat!</li>
+                <li>Numele tau este <get var="verificanume" />.</li>
+           </condition>
+        </template>
+    </category>
+    
+     <category>
+        <pattern>Cum ma numesc</pattern>
+        <template>
+            <think><set var="verificanume"><get name="nume" /></set></think> 
+            <condition var="verificanume">
+                <li value="unknown">Inca nu te-ai prezentat!</li>
+                <li>Numele tau este <get var="verificanume" />.</li>
+           </condition>
+        </template>
+    </category>
+         <category>
+        <pattern>Ce nume am</pattern>
+        <template>
+            <think><set var="verificanume"><get name="nume" /></set></think> 
+            <condition var="verificanume">
+                <li value="unknown">IncÄ nu te-ai prezentat!</li>
+                <li>Numele tau este <get var="verificanume" />.</li>
+           </condition>
+        </template>
+    </category>
+    
+     <category>
+        <pattern>^ cine esti ^</pattern>
+        <template>
+		Numele meu este <bot name="name" />, iar scopul meu este de a te ajuta sa descoperi Franta si sa alegi vacanta potrivita prin prezentarea principalelor orase in diferite parti ale tarii.
+		<br/> AÈi dori sÄ Ã®ncepem explorarea?
+		</template>
+    </category>
+    
+         <category>
+        <pattern>^ numesti ^</pattern>
+        <template>
+		Numele meu este <bot name="name" />, iar scopul meu este de a vÄ ajuta sÄ gÄsiÈi un film de acÈiune care sa corespundÄ cu cerinÈele dumneavoastrÄ.
+		<br/> AÈi dori sÄ Ã®ncepem sÄ gÄsim un film de acÈiune Ã®mpreunÄ?
+		</template>
+    </category>
+    
+         <category>
+        <pattern>^ numele ^</pattern>
+        <template>
+		Numele meu este <bot name="name" />, iar scopul meu este de a te ajuta sa descoperi Franta si sa alegi vacanta potrivita prin prezentarea principalelor orase in diferite parti ale tarii.
+		<br/> AÈi dori sÄ Ã®ncepem explorarea?
+		</template>
+    </category>
+    
+         <category>
+        <pattern>^ nume ^</pattern>
+        <template>
+		Numele meu este <bot name="name" />, iar scopul meu este de a te ajuta sa descoperi Franta si sa alegi vacanta potrivita prin prezentarea principalelor orase in diferite parti ale tarii.
+		<br/>AÈi dori sÄ Ã®ncepem explorarea?
+		</template>
+    </category>
+    
+        <category>
+	    <pattern>Ce faci </pattern>
+	    <template>Bine, mulÈumesc. AÈi dori sÄ Ã®ncepem explorarea?</template>
+    </category>
+    
+    
+
+    
+    
+        <category>
+            <pattern>nu</pattern>
+            
+            <template>Ãmi pare rÄu ca nu ti pot fi de folos. O zi buna!</template>
+        </category>
+        
+        <category>
+            <pattern>^ nu ^</pattern>
+            
+            <template>Ãmi pare rÄu ca nu ti pot fi de folos. O zi buna!</template>
+        </category>
+        
+        <category>
+            <pattern>da</pattern>
+            <template>Bun. Urmeaza sa va adresez intrebari insotite cu diferite variante de raspuns.
+            Ce zona din Franta ai vrea sa vizitezi?
+
+            <button>
+                <text>Nord</text>
+                <postback>Nord</postback>
+            </button>
+            <button>
+                <text>Est</text>
+                <postback>Est</postback>
+            </button>
+            <button>
+                <text>Sud</text>
+                <postback>Sud</postback>
+            </button>
+            <button>
+                <text>Vest</text>
+                <postback>Vest</postback>
+            </button>
+            </template>
+        </category>
+        
+                <category>
+            <pattern>^ da ^</pattern>
+            <template>Bun. Urmeaza sa va adresez intrebari insotite cu diferite variante de raspuns.
+            Ce zona din Franta ai vrea sa vizitezi?
+
+            <button>
+                <text>Nord</text>
+                <postback>Nord</postback>
+            </button>
+            <button>
+                <text>Est</text>
+                <postback>Est</postback>
+            </button>
+            <button>
+                <text>Sud</text>
+                <postback>Sud</postback>
+            </button>
+            <button>
+                <text>Vest</text>
+                <postback>Vest</postback>
+            </button>
+            
+            </template>
+        </category>
+        <category>
+            <pattern>Nord</pattern>
+            <template><srai>Nord</srai></template>
+        </category>
+        
+         <category>
+            <pattern>Est</pattern>
+            <template><srai>Est</srai></template>
+        </category>
+        <category>
+            <pattern>Sud</pattern>
+            <template><srai>Sud</srai></template>
+        </category>
+        
+         <category>
+            <pattern>Vest</pattern>
+            <template><srai>Vest</srai></template>
+        </category>
+        <category>
+            <pattern> ^ munte ^</pattern>
+            <template>Nu ai ales o zona exacta.Te rog, alege de mai jos:
+           <ul> 
+                <li>Nord</li>
+                <li>Sud</li>
+                <li>Est</li>
+                <li>Vest</li>
+            </ul>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>^ mare ^</pattern>
+            <template>Nu ai ales o zona exacta.Dar, daca vrei sa ai iesire la apa, trei variante iti asigura acest lucru.Te rog, alege de mai jos:
+           <ul> 
+                <li>Nord</li>
+                <li>Sud</li>
+                <li>Vest</li>
+            </ul>
+            </template>
+        </category>
+        <category>
+            <pattern>^ oras ^</pattern>
+            <template>Nu ai ales o zona exacta.Fiecare din zone ofera sugestii de orase.Te rog, alege de mai jos:
+           <ul> 
+                <li>Nord</li>
+                <li>Sud</li>
+                <li>Est</li>
+                <li>Vest</li>
+            </ul>
+            </template>
+        </category>
+        <category>
+        <pattern>Nord</pattern>
+       
+        <template>In continuare o sa-ti prezint orasele reprezentative acestei zone. Spune-mi pe care vrei sa-l alegi.
+        
+        <button>
+            <text>Paris</text>
+            <postback>Paris</postback>
+        </button>
+        <button>
+            <text>Lille</text>
+            <postback>Lille</postback>
+        </button>
+        
+        
+        <think><set name = "topic">Nord</set></think>
+        <think><set name="tema">Nord</set></think>
+        
+        </template>
+        
+    </category>
+        <category>
+		
+        <pattern>Paris</pattern>
+        
+        
+		<template>
+		    <image>https://media.giphy.com/media/l41lO7slFlK1ntohq/giphy.gif</image>
+		    Yey, ai ales Paris, o alegere foarte buna. Stiai ca Paris e capitala Frantei si anual are 4 milioane de turisti? Ai facut o alegere foarte buna! 
+            Acum ca am stabilit asta, ce te intereseaza mai exact sau de fapt ce ai vrea sa afli despre oras. Alege categoria care te-ar interesa.
+        
+        <button>
+            <text>Arta si cultura</text>
+            <postback>Arta si cultura</postback>
+        </button>
+        <button>
+            <text>Activitati in aer liber</text>
+            <postback>Activitati in aer liber</postback>
+        </button>
+		 
+        
+        
+        <think><set name = "topic">Paris</set></think>
+        <think><set name="tema">Paris</set></think>
+        
+        
+        </template>
+        
+    </category>
+     <category>
+		
+        <pattern>Arta si cultura</pattern>
+        
+		<template>
+		      O alegere foarte buna. Parisul este un important centru cultural al Europei. Este renumit pentru muzeele lui, catedrale si deferite castele impreuna cu monumente.
+		      Acum spune-mi, in aceasta calatorie, ce te-ar interesa mai mult sa vezi?
+        <button>
+            <text>Muzeu</text>
+            <postback>Muzeu</postback>
+        </button>
+        <button>
+            <text>Castel sau Palat</text>
+            <postback>Castel sau Palat</postback>
+        </button>
+		 <button>
+            <text>Lacasuri de cult</text>
+            <postback>Lacasuri de cult</postback>
+        </button>
+        <button>
+            <text>Monumente </text>
+            <postback>Monumente</postback>
+        </button>
+        
+        
+        <think><set name = "topic">Arta si cultura</set></think>
+        <think><set name="tema">Arta si cultura</set></think>
+        
+        
+        </template>
+        
+    </category>
+     <category>
+		
+        <pattern>Activitati in aer liber</pattern>
+        
+		<template>
+		       Capitala francezÄ oferÄ turiÈtilor nu doar nenumÄrate muzee interesante Èi o arhitecturÄ superbÄ, ci Èi o multitudine de parcuri si grÄdini frumoase, perfecte pentru cÃ¢teva momente de relaxare.
+		       Alege acum ceva ce-ti face placere.
+        <button>
+            <text>Gradini</text>
+            <postback>Gradini</postback>
+        </button>
+        <button>
+            <text>Parcuri</text>
+            <postback>Parcuri</postback>
+        </button>
+		 
+        <think><set name = "topic">Activitati in aer liber</set></think>
+        <think><set name="tema">Activitati in aer liber</set></think>
+        
+        
+        </template>
+        
+    </category>
+    <category>
+		
+        <pattern>Muzeu</pattern>
+        
+		<template>
+		       Muzeele joaca un rol foarte important in turismul parizian si daca ar fi sa facem un top al celor mai importante muzee din Paris ne-ar fi tare greu asa ca iti prezint principalele categorii de muzee.
+		       
+        <button>
+            <text>Arta</text>
+            <postback>Arta</postback>
+        </button>
+        <button>
+            <text>Istorie</text>
+            <postback>Istorie</postback>
+        </button>
+        <button>
+            <text>Casa memoriala</text>
+            <postback>Casa memoriala</postback>
+        </button>
+        
+		 
+        <think><set name = "topic">Muzeu</set></think>
+        <think><set name="tema">Muzeu</set></think>
+        
+        
+        </template>
+       
+          </category>
+   <category>
+       <pattern>Arta</pattern>
+       <template>
+           Parisul este cunoscut in intreaga lume ca fiind centru cultura al umanitatii. Muzeele sunt printre principalele atractii, in principal cele de arta.
+           Pentru ca ai ales categoria Arta iti recomand superbul Muzeu Luvru.Muzeul Luvru este cel mai vizitat muzeu de arta din lume, un monument plin de incarcatura istorica si un muzeu national al Frantei.
+           Printre piesele cele mai celebre prezente la Luvru se numÄrÄ: Codul lui Hammurabi, Venus din Milo si Gioconda de Leonardo da Vinci. 
+           <card>
+             <image>https://turismistoric.ro/wp-content/uploads/2015/09/myzei-lyvr.jpg</image> 
+            <title>Muzeul Luvru</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://turismistoric.ro/muzeul-luvru-locul-unde-se-intalnesc-venus-din-milo-si-mona-lisa/</url>
+                        </button>
+                            <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    <category>
+       <pattern>Istorie</pattern>
+       <template>
+           Muzeul d'Orsay este un muzeu construit de Victor Laloux Ã®ntre anii 1898 Åi 1900. ColecÅ£iile sale cuprind picturÄ, sculpturÄ, fotografie, arhitecturÄ, arte grafice Åi decorative. DeÅ£ine cea mai mare colecÅ£ie de opere impresioniste Åi post-impresioniste din lume.
+           <card>
+             <image>https://www.tititudorancea.info/lib/edfiles/gm/muse_dorsay22_crop_w4c.jpg</image> 
+            <title>Muzeul Orsay</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.tititudorancea.info/z/muzeul_orsay_paris.htm</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   
+    <category>
+       <pattern>Casa memoriala</pattern>
+       <template>
+        Aici se pot gÄsi multe dintre obiectele scriitorului, printre care unele din tinereÅ£e, dar Åi unele pe care le-a avut cu puÅ£in timp Ã®nainte de trecerea sa Ã®n nefiinÅ£Ä.
+           <card>
+             <image>https://concentrateur.loopi-velo.fr/api/1.0/image/full/normandie/PCUNORM00FS0009R/musee-victor-hugo-2-800x600-2.jpg</image> 
+            <title>Casa lui Victor Hugo</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://destepti.ro/casa-lui-victor-hugo-paris-franta</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   
+   
+       <category>
+		
+        <pattern>Castel sau Palat</pattern>
+        
+		<template>
+        O adevÄratÄ reprezentare a rafinamentului francez, palatele Parisien sunt fascinante. Cu un nivel garantat de calitate Èi lux, existÄ doar o mÃ¢nÄ de unitÄÈi care poate obÈine acest rÃ¢vnit titlu. Este o recunoaÈtere care face doar cÃ¢teva persoane fericite Ã®ntr-un cerc foarte elitic. 
+        <button>
+            <text>Regal</text>
+            <postback>Regal</postback>
+        </button>
+        <button>
+            <text>Resedinta  oficiala</text>
+            <postback>Resedinta  oficiala</postback>
+        </button>
+       
+        
+        <think><set name = "topic">Castel sau Palat</set></think>
+        <think><set name="tema">Castel sau Palat</set></think>
+        
+        
+        </template>
+        
+    </category>
+    
+    <category>
+       <pattern>Regal</pattern>
+       <template>
+         Situat in partea de sud-est a Parisului, la doar 45 de minute de acesta, Castelul Versailles este cel mai somptuos castel din Europa si asociat cu numele regelui Ludovic al XIV-lea al Frantei. Marimea Palatului Versailles va poate taia rasuflarea. 
+              <card>
+             <image>https://franta1.weebly.com/uploads/2/5/9/3/25935641/7924822_orig.jpg</image> 
+            <title>Palatul Versailles</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://caietdecalatorii.blog/2017/02/05/palatul-versailles-locul-unde-luxul-isi-da-mana-cu-istoria/</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    <category>
+       <pattern>Resedinta  oficiala</pattern>
+       <template>
+    Palatul Elysee (Ã®n francezÄ FrancezÄ: Palais de l'ElysÃ©e) este sediul PreÈedinÈiei Republicii Franceze Èi reÈedinÈa oficialÄ a preÈedinÈilor
+           <card>
+             <image>https://media.rtv.net/image/201810/full/presedinte_fran_63704400.jpg</image> 
+            <title>Palatul Elysee</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.infotour.ro/ghid-turistic/palate-si-castele/palatul-elysee-din-paris-1586</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   
+  
+    
+    <category>
+		
+        <pattern>Lacasuri de cult</pattern>
+        
+		<template>
+        AstÄzi, oricine poate aprecia frumuseÈea sacrÄ a bisericilor magnifice ale oraÈului, care oferÄ spaÈii de primire pentru refugiul meditativ Èi inspiraÈia spiritualÄ.
+Vizitarea celor mai importante biserici din Paris oferÄ o privire asupra celei mai bune arte Èi arhitecturi ale oraÈului, precum Èi a vieÈii sale religioase.
+        <button>
+            <text>Catedrala</text>
+            <postback>Catedrala</postback>
+        </button>
+        <button>
+            <text>Bazilica</text>
+            <postback>Bazilica</postback>
+        </button>
+        <button>
+            <text>Capela</text>
+            <postback>Capela</postback>
+        </button>
+        
+        <think><set name = "topic">Lacasuri de cult</set></think>
+        <think><set name="tema">Lacasuri de cult</set></think>
+        
+        
+        </template>
+        
+    </category>
+    
+    <category>
+       <pattern>Catedrala</pattern>
+       <template>
+         Situat in partea de sud-est a Parisului, la doar 45 de minute de acesta, Castelul Versailles este cel mai somptuos castel din Europa si asociat cu numele regelui Ludovic al XIV-lea al Frantei. Marimea Palatului Versailles va poate taia rasuflarea. 
+              <card>
+             <image>https://franta1.weebly.com/uploads/2/5/9/3/25935641/7924822_orig.jpghttps://str.crestin-ortodox.ro/foto/675/67484_catedrala.jpg</image> 
+            <title>Catedrala Notre-Dame</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>http://www.descoperalocuri.ro/vacante-in-afara-tarii/notre-dame-de-paris.html</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    <category>
+       <pattern>Bazilica</pattern>
+       <template>
+        Este vizitata de numerosi turisti in fiecare an, atrasi de frumusetea sa si de arhitectura in stil romano-bizantin. Daca nu vrei sa urci dealul care duce catre catedrala, poti alege sa urci cu funicularul. Odata ce ai ajuns aici, trebuie neaparat sa urci cele 300 de trepte pana in varful domului, daca vrei sa te bucuri de cea mai spectaculoasa panorama a orasului.
+           <card>
+             <image>https://cdn.pariscityvision.com/library/image/4677.jpg</image> 
+            <title>Basilica Sacre-Coeur</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>http://pelerinaje-mariane.ro/alte-sanctuare/basilica-sacre-coeur-paris/</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   <category>
+       <pattern>Capela</pattern>
+       <template>
+        Sfanta Capela sau Sainte-Chapelle, localizata in interiorul complexului Palatului de Justitie aflat in centrul Parisului, este un exemplu perfect al stilului rayonnant al arhitecturii gotice. Aceasta a fost ridicata de catre regele Louis al IX-lea al Frantei, cu menirea de a pazi Coroana Regala si un fragment din Sfanta Cruce, valoroasa relicva a Patimilor.
+           <card>
+             <image>https://www.portalturism.com/uploads/picture/image/29554/large_capela-sfanta-paris.jpg</image> 
+            <title>Capela Sfanta</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.portalturism.com/obiectiv-turistic/capela-sfanta-paris-frantas</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    
+    <category>
+		
+        <pattern>Monumente</pattern>
+        
+		<template>
+        Paris este un oras cu numeroase atractii turistice, de la muzeele care adapostesc opere de arta fascinante si pana la monumentele istorice si catedralele impunatoare. In orice perioada alegi sa mergi in Paris, cu siguranta vei gasi numeroase lucruri de facut si locuri de vizitat. 
+        <button>
+            <text>Turnul Eiffel</text>
+            <postback>Turnul Eiffel</postback>
+        </button>
+        <button>
+            <text>Arcul de Triumf</text>
+            <postback>Arcul de Triumf</postback>
+        </button>
+        
+        <think><set name = "topic">Monumente</set></think>
+        <think><set name="tema">Monumente</set></think>
+        
+        </template>
+        
+    </category>
+    <category>
+       <pattern>Turnul Eiffel</pattern>
+       <template>
+        Desi arhitectul Gustave Eiffel l-a construit doar pentru expozitia temporara din 1889 de la Targul Mondial, nimeni nu si-ar putea imagina Parisul fara acesta atractie turistica emblematica. Pana la etajul al doilea poti urca cu liftul sau poti alege sa urci cele 704 de trepte. 
+           <card>
+             <image>https://mediacdn.libertatea.ro/unsafe/1200x800/smart/filters:contrast(8):quality(80)/https://static4.libertatea.ro/wp-content/uploads/2020/01/turnul-eiffel-lucruri-pe-care-nu-le-stiai-despre-simbolul-parisului.jpg</image> 
+            <title>Turnul Eiffel</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.libertatea.ro/lifestyle/turnul-eiffel-lucruri-pe-care-nu-le-stiai-despre-simbolul-parisului-2852382</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   <category>
+       <pattern>Arcul de Triumf</pattern>
+       <template>
+        Arcul de Triumf - cel de-al doilea simbol al Parisului este acest monument istoric care a fost ridicat cu ocazia victoriei lui Napoleon de al Austerlitz, in anul 1805. Odata ce ajungi in varful Arcului de Triumf, dupa ce vei urca cele 284 de trepte, vei putea admira orasul de la inaltime si toate cele 12 strazi care se intersecteaza cu esplanada pe care este situat.
+           <card>
+             <image>https://cdn.historia.ro/img/articles/2019/05/08/shutterstock_48534652.jpg?v=1</image> 
+            <title>Arcul de Triumf</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>http://www.descoperalocuri.ro/atractii-turistice/arcul-de-triumf-din-paris-monumentul-eroilor.html</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    
+    <category>
+       <pattern>Parcuri</pattern>
+       <template>
+        Proiectat ca promenadÄ publicÄ din secolul al XIX-lea, acest parc istoric de 28 de hectare este plantat cu aproximativ 3.000 de copaci, o mie dintre care au o vechime de peste un secol
+           <card>
+               <title>Parc Bordelais</title>
+             <image>https://c8.alamy.com/comp/W0E0T2/france-gironde-bordeaux-lake-in-the-parc-bordelais-W0E0T2.jpg</image>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.tripadvisor.com/Attraction_Review-g187079-d6416877-Reviews-Parc_Bordelais-Bordeaux_Gironde_Nouvelle_Aquitaine.html</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   <category>
+       <pattern>Gradini</pattern>
+       <template>
+         Este o atractie ideala pentru toate tipurile de cÄlÄtori, fie cÄ vizita solo oraÈ, Ã®n cÄutarea pentru o plimbare romantica, Ã®nsoritÄ Ã®n capitalÄ sau Ã®ncearcÄ sÄ gÄseascÄ un loc atÃ¢t amuze Èi sÄ educe copiii. PÄstraÈi lecturÄ pentru a afla cum sÄ profite la maximum de ea.
+           <card>
+             <image>https://scms.machteamsoft.ro/uploads/photos/652x450/652x450_149747-cele-mai-frumoase-gradini-le-parc-de-bagatelle-bijuteria-botanica-a-parisului.jpg</image> 
+            <title>Gradina Botanica</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.infotour.ro/ghid-turistic/gradini-si-parcuri/gradina-botanica-din-paris-1536</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    
+    
+     <category>
+		
+        <pattern>Lille</pattern>
+   
+		<template>
+		    <image>https://media.giphy.com/media/3oEdv7PCSvCW183t3a/giphy.gif</image>
+		    Lille este al 4-lea oras ca marime din Franta, dupa Paris, Lyon si Marsilia, iar in 2020 are toate sansele sa devina capitala europeana a designului datorita constructiilor si arhitecturilor care ne-au surpins intr-un mod placut. 
+        <button>
+            <text>Arta si cultura</text>
+            <postback>Arta si cultura2</postback>
+        </button>
+        <button>
+            <text>Activitati in aer liber</text>
+            <postback>Activitati in aer liber2</postback>
+        </button>
+		 
+        <think><set name = "topic">Lille</set></think>
+        <think><set name="tema">Lille</set></think>
+        
+        
+        </template>
+        
+    </category>
+     <category>
+		
+        <pattern>Arta si cultura2</pattern>
+        
+		<template>
+		    Arta si cultura iin acest oras se imbina ca intr-o melodie frumos compusa.Este un oras cu strazi medievale si cladiri in stil flamand, cochet. curat, unde te poti deplasa usor atat pe jos, cat si cu transportul in comun cu autobuzul sau cu metroul.
+        <button>
+            <text>Muzeu</text>
+            <postback>Muzeu2</postback>
+        </button>
+        <button>
+            <text>Castel sau Palat</text>
+            <postback>Castel sau Palat2</postback>
+        </button>
+		 <button>
+            <text>Lacasuri de cult</text>
+            <postback>Lacasuri de cult2</postback>
+        </button>
+        <button>
+            <text>Casa memoriala </text>
+            <postback>Casa memoriala2</postback>
+        </button>
+        
+        
+        <think><set name = "topic">Arta si cultura2</set></think>
+        <think><set name="tema">Arta si cultura2</set></think>
+        
+        
+        </template>
+        
+    </category>
+    
+    
+    
+     <category>
+		
+        <pattern>Activitati in aer liber2</pattern>
+        
+		<template>
+		       Capitala francezÄ oferÄ turiÈtilor nu doar nenumÄrate muzee interesante Èi o arhitecturÄ superbÄ, ci Èi o multitudine de parcuri si grÄdini frumoase, perfecte pentru cÃ¢teva momente de relaxare.
+		       Alege acum ceva ce-ti face placere.
+        
+        <button>
+            <text>Gradini Zoo</text>
+            <postback>Gradini Zoo</postback>
+        </button>
+		<button>
+            <text>Parcuri de distractii</text>
+            <postback>Parcuri de distractii</postback>
+        </button> 
+        <think><set name = "topic">Activitati in aer liber2</set></think>
+        <think><set name="tema">Activitati in aer liber2</set></think>
+        
+        
+        </template>
+        
+    </category>
+    
+    <category>
+       <pattern>Gradini Zoo</pattern>
+       <template>
+           
+            <card>
+             <image>https://media-cdn.tripadvisor.com/media/photo-s/0c/69/4c/fc/plan-du-parc-zoologique.jpg</image>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.infotour.ro/ghid-turistic/gradini-si-parcuri/gradina-zoologica-din-lille-1408</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   <category>
+       <pattern>Parcuri de distractii</pattern>
+       <template>
+
+           <card>
+             <image>https://9968c6ef49dc043599a5-e151928c3d69a5a4a2d07a8bf3efa90a.ssl.cf2.rackcdn.com/1115693.jpg</image> 
+            <title>Golf Lille Metropole</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://en.leadingcourses.com/europe+france+hauts-de-france/golf-lille-m%C3%A9tropole/</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    
+    <category>
+		
+        <pattern>Muzeu2</pattern>
+        
+		<template>
+		       Muzeele joaca un rol foarte important in turismul parizian si daca ar fi sa facem un top al celor mai importante muzee din Paris ne-ar fi tare greu asa ca iti prezint principalele categorii de muzee.
+		       
+        <button>
+            <text>Arta</text>
+            <postback>Arta2</postback>
+        </button>
+        <button>
+            <text>Istorie</text>
+            <postback>Istorie</postback>
+        </button>
+        
+        <button>
+            <text>Casa memoriala</text>
+            <postback>Casa memoriala2</postback>
+        </button>
+        
+		 
+        <think><set name = "topic">Muzeu</set></think>
+        <think><set name="tema">Muzeu</set></think>
+        
+        
+        </template>
+        
+    </category>
+    
+    <category>
+       <pattern>Arta2</pattern>
+       <template>
+           Palatul Artelor Frumoase este o bijuterie, atÃ¢t la interior, cÃ¢t Èi la exterior. DupÄ cum sugereazÄ Èi numele, gÄzduieÈte un muzeu de artÄ, principalele sale colecÈii fiind alcÄtuite din picturi renumite, semnate de Rubens, Manet, Van Dyck. 
+           <card>
+             <image>https://upload.wikimedia.org/wikipedia/commons/e/e7/Lille_palais_des_beaux_arts_face_2.jpg</image> 
+            <title>Muzeul de arte frumoase</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.infotour.ro/ghid-turistic/muzee-si-galerii-de-arta/muzeul-de-arte-frumoase-din-lille-1400/</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    <category>
+       <pattern>Istorie</pattern>
+       <template>
+        Muzeul Gunners este un muzeu din Lille, situat Ã®n fosta mÄnÄstire a Planificatorilor OraÈului.Muzeul prezintÄ o colecÈie de obiecte referitoare la FrÄÈia Sainte-Barbe Èi apÄrarea oraÈului Lille.
+           <card>
+             <image>https://upload.wikimedia.org/wikipedia/commons/f/ff/Lille%2C_Mus%C3%A9e_des_Mus%C3%A9e_des_canonniers.jpg</image> 
+            <title>MusÃ©e des canonniers</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.viator.com/en-PH/Lille-attractions/Musee-des-Canonniers/d824-a19170</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   
+    <category>
+       <pattern>Casa memoriala2</pattern>
+       <template>
+        Casa memoriala a Generalului Charles de Gaulle este deschisa publicului si se poate vizita, aceasta fiind transformata in muzeu.
+           <card>
+             <image>https://upload.wikimedia.org/wikipedia/commons/0/07/Lille_maison-musee_de_gaulle.JPG</image> 
+            <title>Casa lui Charles de Gaulle</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.infotour.ro/ghid-turistic/cladiri-si-turnuri/casa-natala-a-generalului-charles-de-gaulle-din-lille-1404</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   
+    
+    
+    
+    
+    <category>
+		
+        <pattern>Castel sau Palat2</pattern>
+        
+		<template>
+       FranÈa ar putea fi numitÄ cu uÈurinÈÄ Èara Castelelor, asadar nici Lille nu duce lipsa. Reprezentativ pentru acest oras este un castel in stil medieval care merita vizitat.
+        <button>
+            <text>Medieval</text>
+            <postback>Medieval</postback>
+        </button>
+       
+        
+        <think><set name = "topic">Castel sau Palat2</set></think>
+        <think><set name="tema">Castel sau Palat2</set></think>
+        
+        
+        </template>
+        
+    </category>
+     <category>
+       <pattern>Medieval</pattern>
+       <template>
+Castelul de la Fontaine, o reÈedinÈÄ maiestuoasÄ din secolul al XIX-lea, se aflÄ Ã®ntr-un parc de 40 de hectare Èi gÄzduieÈte acum Institutul Fontaine, un loc de vindecare Èi un petic vegetal de permaculturÄ.
+       <card>
+             <image>https://i.pinimg.com/originals/d5/b1/d0/d5b1d090950ae486b05dba999cb2d0bf.jpg</image> 
+            <title>ChÃ¢teau de Fontaine</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.infotour.ro/ghid-turistic/cladiri-si-turnuri/casa-natala-a-generalului-charles-de-gaulle-din-lille-1404</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   
+    <category>
+		
+        <pattern>Lacasuri de cult2</pattern>
+        
+		<template>
+       Oras istoric fascinant, Lille va ofera numeroase atractii turistice, de la palate si muzee pana la lacasuri de cult menite sa aduca impreuna diverse religii in acelasi loc. Spune-mi ce te intereseaza: 
+        <button>
+            <text>Catedrala</text>
+            <postback>Catedrala2</postback>
+        </button>
+        <button>
+            <text>Bazilica</text>
+            <postback>Bazilica2</postback>
+        </button>
+        <button>
+            <text>Capela</text>
+            <postback>Capela2</postback>
+        </button>
+        
+        <think><set name = "topic">Lacasuri de cult2</set></think>
+        <think><set name="tema">Lacasuri de cult2</set></think>
+        
+        
+        </template>
+        
+    </category>
+   
+ <category>
+       <pattern>Catedrala2</pattern>
+       <template>
+         Situat in partea de sud-est a Parisului, la doar 45 de minute de acesta, Castelul Versailles este cel mai somptuos castel din Europa si asociat cu numele regelui Ludovic al XIV-lea al Frantei. Marimea Palatului Versailles va poate taia rasuflarea. 
+              <card>
+             <image>https://upload.wikimedia.org/wikipedia/commons/6/64/Lille_NDT_cote_1_bis.jpg</image> 
+            <title>CATHEDRALE NOTRE-DAME DE LA TREILLE</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.tripadvisor.com/Attraction_Review-g187178-d13387436-Reviews-Cathedrale_de_la_Treille-Lille_Nord_Hauts_de_France.html</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    <category>
+       <pattern>Bazilica2</pattern>
+       <template>
+        Este vizitata de numerosi turisti in fiecare an, atrasi de frumusetea sa si de arhitectura in stil romano-bizantin. Daca nu vrei sa urci dealul care duce catre catedrala, poti alege sa urci cu funicularul. Odata ce ai ajuns aici, trebuie neaparat sa urci cele 300 de trepte pana in varful domului, daca vrei sa te bucuri de cea mai spectaculoasa panorama a orasului.
+           <card>
+             <image>https://cdn.pariscityvision.com/library/image/4677.jpg</image> 
+            <title>Basilica  Sainte-Marie Madeleine</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://en.lilletourism.com/historic-sites-and-monuments-lille/sainte-marie-madeleine.html/</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   <category>
+       <pattern>Capela2</pattern>
+       <template>
+        Sfanta Capela sau Sainte-Chapelle, localizata in interiorul complexului Palatului de Justitie aflat in centrul Parisului, este un exemplu perfect al stilului rayonnant al arhitecturii gotice. Aceasta a fost ridicata de catre regele Louis al IX-lea al Frantei, cu menirea de a pazi Coroana Regala si un fragment din Sfanta Cruce, valoroasa relicva a Patimilor.
+           <card>
+             <image>https://upload.wikimedia.org/wikipedia/commons/7/7d/Lille_notre_dame_reconciliation.JPG</image> 
+            <title>Chapelle Notre Dame de Reconcilation</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.france-voyage.com/cities-towns/lille-22091/chapel-notre-dame-reconciliation-14941.htm</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+
+   <category>
+				<pattern>altcv</pattern>
+				<template><image>https://media.giphy.com/media/ivH4UhEAPXNAI/giphy.gif</image>
+					Nu te-am convins inca... Mai da-mi o sansa, alege ce ai vrea sa mai vezi
+				<button>
+				<text>Arata-mi</text>
+					<postback>da</postback>
+				</button>
+				   
+				</template>
+		</category>
+	
+		
+		
+		<category>
+        <pattern>Sud</pattern>
+       
+        <template>In continuare o sa-ti prezint orasele reprezentative acestei zone. Spune-mi pe care vrei sa-l alegi.
+        
+        <button>
+            <text>Nisa</text>
+            <postback>Nisa</postback>
+        </button>
+        <button>
+            <text>Marsilia</text>
+            <postback>Marsilia</postback>
+        </button>
+        
+        
+        <think><set name = "topic">Sud</set></think>
+        <think><set name="tema">Sud</set></think>
+        
+        </template>
+        
+    </category>
+        <category>
+		
+        <pattern>Nisa</pattern>
+        
+		<template>
+		    <image>https://media.giphy.com/media/l41lO7slFlK1ntohq/giphy.gif</image>
+		  
+		  			Ahh, Nisa, frumosul oraÈ de la malul meditaranei, cochet Èi eclectic. Culorile pastelate Ã®n care sunt vopsite clÄdirile Èi albastrul electrizant al apei impreuna cu arta si cultura lui, te fac sÄ te Ã®ndrÄgostesti de acest oraÈ. Cu ce vrei sa incepem?
+	  
+        <button>
+            <text>Arta si cultura</text>
+            <postback>Arta si cultura3</postback>
+        </button>
+        <button>
+            <text>Activitati in aer liber</text>
+            <postback>Activitati in aer liber3</postback>
+        </button>
+		 
+        
+        
+        <think><set name = "topic">Nisa</set></think>
+        <think><set name="tema">Nisa</set></think>
+        
+        
+        </template>
+        
+    </category>
+     <category>
+		
+        <pattern>Arta si cultura3</pattern>
+        
+		<template>
+		   Arta si cultura francezÄ este bogatÄ, diversificatÄ Èi veche, Èi reflectÄ culturile sale regionale Èi influenÈa numeroaselor valuri de imigraÈie de-a lungul timpului.Nisa este de asemenea un centru cultural important ce merita vizitat.Ce loc ai vrea sa vezi?
+        <button>
+            <text>Muzeu</text>
+            <postback>Muzeu3</postback>
+        </button>
+        <button>
+            <text>Castel sau Palat</text>
+            <postback>Castel sau Palat3</postback>
+        </button>
+		 <button>
+            <text>Lacasuri de cult</text>
+            <postback>Lacasuri de cult3</postback>
+        </button>
+        
+        
+        <think><set name = "topic">Arta si cultura3</set></think>
+        <think><set name="tema">Arta si cultura3</set></think>
+        
+        
+        </template>
+        
+    </category>
+     <category>
+		
+        <pattern>Activitati in aer liber3</pattern>
+        
+		<template>
+		      O zi in Nisa este suficienta pentru a te lasa farmecat de frumusetea celui mai vizitat oras de pe Coasta de Azur. Fie ca esti pasionat de istorie si cultura, sau din contra, te bucuri de fiecare iesire la plaja, in Nisa le vei putea face pe ambele, dar si multe altele.
+        <button>
+            <text>Plaja</text>
+            <postback>Plaja</postback>
+        </button>
+        <button>
+            <text>Parcuri</text>
+            <postback>Parcuri2</postback>
+        </button>
+		 
+        <think><set name = "topic">Activitati in aer liber3</set></think>
+        <think><set name="tema">Activitati in aer liber3</set></think>
+        
+        
+        </template>
+        
+    </category>
+    <category>
+		
+        <pattern>Muzeu3</pattern>
+        
+		<template>
+		      Nisa este renumitÄ Ã®n FranÈa pentru muzeele sale. NumeroÈi pictori Èi artiÈti Èi-au gÄsit inspiraÈia Ã®n acest oraÈ. Nu poti sa le ratezi, asa ca spune-mi ce ai vrea sa vezi? 
+        <button>
+            <text>Arta</text>
+            <postback>Arta3</postback>
+        </button>
+        <button>
+            <text>Istorie</text>
+            <postback>Istorie2</postback>
+        </button>
+        
+        
+		 
+        <think><set name = "topic">Muzeu3</set></think>
+        <think><set name="tema">Muzeu3</set></think>
+        
+        
+        </template>
+       
+          </category>
+   <category>
+       <pattern>Arta3</pattern>
+       <template>
+           Muzeul, fondat Ã®n 1963 Ã®n aÅa-numita Vila Genoise Åi redeschis Ã®n 1993, este situat Ã®n Cimiez, o liniÅtitÄ zonÄ deluroasÄ din nordul oraÅului Nisa, Ã®n vecinÄtatea Muzeului de Arheologie Nice-Cimiez (cu care a Ã®mpÄrÅ£it aceeaÅi clÄdire pÃ¢nÄ Ã®n 1989).
+           <card>
+             <image>https://www.haftasonuyurtdisi.com/wp-content/uploads/2017/09/musee-matisse-nice.gif</image> 
+            <title>MusÃ©e Matisse</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>http://www.nice-tourism.com/ro/obiective-turistice-nisa/muzee-si-galerii-in-nisa/muzeul-matisse.html</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    <category>
+       <pattern>Istorie2</pattern>
+       <template>
+		Cele mai bine de 20 de sÄli de expoziÅ£ie refac istoria oraÅului Nisa prin prezentarea de colecÅ£ii de tot felul de articole, cum ar fi mobilÄ, decoraÅ£iuni Åi lucrÄri artistice ce se ridicÄ la mai bine de 15000 de exponate.		          
+		<card>
+             <image>https://images.worldtourismgroup.com/worldtourismgroup-image/europe/942/brief-history-cimiez-nice-2.jpg</image> 
+            <title>Muzeul Massena</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>http://www.nice-tourism.com/ro/obiective-turistice-nisa/muzee-si-galerii-in-nisa/muzeul-de-arta-si-istorie-de-la-palatul-massena.html</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   
+    
+   
+       <category>
+		
+        <pattern>Castel sau Palat3</pattern>
+        
+		<template>
+        De-a lungul secolelor, patrimoniul arhitectural al Nisei s-a Ã®mbogÄÅ£it considerabil, mai multe palate, castele, hoteluri Èi biserici Ã®n stil baroc fiind construite Ã®n diferite epoci.
+        <button>
+            <text>Regal</text>
+            <postback>Regal3</postback>
+        </button>
+        <button>
+            <text>Gotic</text>
+            <postback>Gotic</postback>
+        </button>
+       
+        
+        <think><set name = "topic">Castel sau Palat3</set></think>
+        <think><set name="tema">Castel sau Palat3</set></think>
+        
+        
+        </template>
+        
+    </category>
+    
+    <category>
+       <pattern>Regal3</pattern>
+       <template>
+				Actualul Palat al Prefecturii din Nisa a jucat un rol de cÄpetenie Ã®n istoria politicÄ Åi administrativÄ a oraÅului Ã®ncÄ de la Ã®nceputul secolului al XVII-lea. Data construirii sale nu este cunoscutÄ cu precizie, Ã®nsÄ este sigur cÄ edificiul a fost folosit ca reÅedinÅ£Ä de cÄtre Ducii de Savoia Ã®n timpul vizitelor lor constante la Nisa timp de 250 de ani.            
+
+			<card>
+             <image>https://adevarul.ro/assets/beta.adevarul.ro/MRImage/2010/12/08/50a961a57c42d5a6637a7a0f/646x404.jpg</image> 
+            <title>Palatul Prefecturii</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.infotour.ro/ghid-turistic/palate-si-castele/palatul-prefecturii-din-nisa-1441</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    <category>
+       <pattern>Gotic</pattern>
+       <template>
+			Chateau de lâAnglais este, fÄrÄ Ã®ndoialÄ, un obiectiv ce nu trebuie omis pentru turiÅtii care viziteazÄ Nisa. A fost Ã®ncadrat ca monument istoric Ã®n anul 2000.
+           <card>
+             <image>https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Le_ch%C3%A2teau_de_l%27anglais_nice.jpg/1200px-Le_ch%C3%A2teau_de_l%27anglais_nice.jpg</image> 
+            <title>Chateau de l'Anglais</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.infotour.ro/ghid-turistic/palate-si-castele/castelul-englezesc-din-nisa-1433</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   
+  
+    
+    <category>
+		
+        <pattern>Lacasuri de cult3</pattern>
+        
+		<template>
+        Ca si in celelalte orase din Franta, lacasurile de cult reprezinta principalele atractii si ale acestui oras. Merita sa le vizitati pentru a lua contact cu cat mai multe stiluri de viata si credinte.Alege te rog de mai jos ce vrei sa iti prezint:
+        <button>
+            <text>Catedrala</text>
+            <postback>Catedrala3</postback>
+        </button>
+        <button>
+            <text>Bazilica</text>
+            <postback>Bazilica3</postback>
+        </button>
+        <button>
+            <text>Capela</text>
+            <postback>Capela3</postback>
+        </button>
+        
+        <think><set name = "topic">Lacasuri de cult3</set></think>
+        <think><set name="tema">Lacasuri de cult3</set></think>
+        
+        
+        </template>
+        
+    </category>
+    
+    <category>
+       <pattern>Catedrala3</pattern>
+       <template>
+         Catedrala este Ã®nchinat Adormirii Maicii Domnului Èi Sfintei Reparata . [3] Este clasat ca monument naÈional Ã®ncepÃ¢nd cu 9 august 1906.
+		 <card>
+             <image>https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Cathedrale_Sainte-Reparate_Nice.jpg/1200px-Cathedrale_Sainte-Reparate_Nice.jpg</image> 
+            <title>Nice Cathedral</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>http://www.nice-tourism.com/ro/obiective-turistice-nisa/edificii-religioase-in-nisa/catedrala-sfanta-reparate.html</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    <category>
+       <pattern>Bazilica3</pattern>
+       <template>
+		Bazilica Notre-Dame de lâAssomption se afirmÄ ca fiind una dintre cele mai noi Åi mai impresionante repere arhitecturale ale Nisei. 
+           <card>
+             <image>https://live.staticflickr.com/940/43677887901_2d0b5c7943_b.jpg</image> 
+            <title>Basilique Notre-Dame de lâAssomption</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://notredame-nice.com/the-history-of-notre-dame-de-lassomption/</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   <category>
+       <pattern>Capela3</pattern>
+       <template>
+        Capela Vizitei Sfintei Maria a fost construitÄ Ã®n secolul al XVI-lea ca parte a unui complex monastic mai amplu, Åi a fost succesiv locuitÄ Åi slujitÄ de trei ordine diferite de cÄlugÄriÅ£e.
+           <card>
+             <image>https://cristigrigore.com/wp-content/uploads/2019/01/DSC00555.jpg</image> 
+            <title>Chapelle de la Visitation</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>http://www.nice-tourism.com/ro/obiective-turistice-nisa/edificii-religioase-in-nisa/capela-vizitei-sfintei-maria.html</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    
+    
+    
+    <category>
+       <pattern>Parcuri2</pattern>
+       <template>
+        O zi in Nisa nu ar fi completa fara o plimbare pe Promenade des Anglais. Fara indoiala, Promenade des Anglais este una dintre cele mai populare faleze din intreaga Europa. 
+           <card>
+             <image>https://luggagehero.com/wp-content/uploads/2019/05/shutterstock_185425934-800x534.jpg</image>
+			 <title>Promenade des Anglais</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>http://www.nice-tourism.com/ro/obiective-turistice-nisa/promenade-si-zone-pietonale-in-nisa/promenade-des-anglais.html</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   <category>
+       <pattern>Plaja</pattern>
+       <template>
+         Chiar daca ajungi in Nisa doar pentru o vizita scurta, ar fi pacat sa nu iti petreci cateva ore si la plaja, mai ales daca vremea permite acest lucru. Plajele din Nisa nu sunt cele mai âprietenoaseâ, doarece sunt pline de pietre, iar nisipul este departe de a fi unul fin. 
+		 <card>
+             <image>https://waterspot.org/wp-content/uploads/listing-uploads/cover/2019/06/plage-marinieres-villefranche-mer-ete-1.jpg</image> 
+            <title>Plage des MariniÃ¨res</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://blog.dertour.ro/recomandari/cele-mai-frumoase-plaje-de-pe-coasta-de-azur/</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   
+   
+   
+   
+   <category>
+		
+        <pattern>Marsilia</pattern>
+       
+        
+		<template>
+		    <image>https://media.giphy.com/media/l41lO7slFlK1ntohq/giphy.gif</image>
+		   Pentru ca ti-ai dorit sa descoperi Coasta de Azur, dar vrei totodatÄ sÄ eviti destinaÈiile cu iz monden, trebuie sÄ aleagÄ Marsilia, destinaÈia culturalÄ-istoricÄ numÄrul 1 de pe coasta francezÄ a Mediteranei, dar este cunoscuta si pentru peisajele de la malul marii Mediterane.Hai sa incepem:
+        Ai facut o alegere foarte buna! Alege categoria care te-ar interesa.
+        <button>
+            <text>Arta si cultura</text>
+            <postback>Arta si cultura4</postback>
+        </button>
+        <button>
+            <text>Activitati in aer liber</text>
+            <postback>Activitati in aer liber4</postback>
+        </button>
+		 
+        
+        
+        <think><set name = "topic">Marsilia</set></think>
+        <think><set name="tema">Marsilia</set></think>
+        
+        
+        </template>
+        
+    </category>
+     <category>
+		
+        <pattern>Arta si cultura4</pattern>
+        
+		<template>
+		 Marsilia Èi-a avut perioada de glorie Ã®n vremea imperiului colonial francez, cÃ¢nd â Ã®n caitate de principal port comercial al imperiului â s-a Ã®mbogÄÈit de pe urma transporturilor dinspre Èi cÄtre colonii.     
+		 Ce doresti sa vezi?
+			  
+        <button>
+            <text>Muzeu</text>
+            <postback>Muzeu4</postback>
+        </button>
+        <button>
+            <text>Castel sau Palat</text>
+            <postback>Castel sau Palat4</postback>
+        </button>
+		 <button>
+            <text>Lacasuri de cult</text>
+            <postback>Lacasuri de cult4</postback>
+        </button>
+        
+        
+        <think><set name = "topic">Arta si cultura4</set></think>
+        <think><set name="tema">Arta si cultura4</set></think>
+        
+        
+        </template>
+        
+    </category>
+     <category>
+		
+        <pattern>Activitati in aer liber4</pattern>
+        
+		<template>
+		 Marsilia este un oras al contrastelor, care te poate surprinde la tot pasul. Daca esti doar in trecere, o zi in Marsilia este de ajuns pentru a vedea obiectivele turistice emblematice ale orasului.Plajele insorite si parcurile sunt in centru atentiei in acest loc.Alege ce te incanta mai tare:      
+        <button>
+            <text>Plaja</text>
+            <postback>Plaja2</postback>
+        </button>
+        <button>
+            <text>Parcuri</text>
+            <postback>Parcuri3</postback>
+        </button>
+		 
+        <think><set name = "topic">Activitati in aer liber3</set></think>
+        <think><set name="tema">Activitati in aer liber3</set></think>
+        
+        
+        </template>
+        
+    </category>
+    <category>
+		
+        <pattern>Muzeu4</pattern>
+        
+		<template>
+		       Muzeele joaca un rol foarte important in turismul parizian si daca ar fi sa facem un top al celor mai importante muzee din Nisa ne-ar fi tare greu asa ca iti prezint principalele categorii de muzee.
+		       
+        <button>
+            <text>Arta</text>
+            <postback>Arta4</postback>
+        </button>
+        <button>
+            <text>Istorie</text>
+            <postback>Istorie3</postback>
+        </button>
+        
+        
+		 
+        <think><set name = "topic">Muzeu4</set></think>
+        <think><set name="tema">Muzeu4</set></think>
+        
+        
+        </template>
+       
+          </category>
+   <category>
+       <pattern>Arta4</pattern>
+       <template>
+           
+           <card>
+             <image>https://www.portalturism.com/uploads/picture/image/247428/large_muzeul-arta-contemporana-marsilia.jpg</image> 
+            <title>Muzeul de arta contemporana</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.portalturism.com/obiectiv-turistic/muzeul-de-arta-contemporana-marsilia-franta</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    <category>
+       <pattern>Istorie3</pattern>
+       <template>
+		 ColecÅ£ia sa bogatÄ cuprinde peste 1.600 de piese, printre care Åi âCartea MorÅ£ilorâ, scrisÄ pe un papirus, ce face parte dintr-o colecÅ£ie de texte funerare destinate a acompania defunctul Ã®n cÄlÄtoria sa Ã®n regatul morÅ£ilor. 
+           <card>
+             <image>https://lh3.googleusercontent.com/proxy/D8AfIS9SDSbK7R-HX-kFjxVZ51rTfaSHC4w6lI_SSepykZ1x5epVlvMBc2VE5VzYHVHNMrevfVYADZXpEBRNbutTS4v8ELr1way2oHzXYsvI1MZF0g</image> 
+            <title>Muzeul de arheologie mediteraneana</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>http://thecitybreak.ro/muzeul-mediteranean-de-arheologie-musee-darcheologie-mediterraneenne-poi/</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   
+    
+   
+       <category>
+		
+        <pattern>Castel sau Palat4</pattern>
+        
+		<template>
+        O adevÄratÄ reprezentare a rafinamentului francez, palatele Nisaien sunt fascinante. Cu un nivel garantat de calitate Èi lux, existÄ doar o mÃ¢nÄ de unitÄÈi care poate obÈine acest rÃ¢vnit titlu. Este o recunoaÈtere care face doar cÃ¢teva persoane fericite Ã®ntr-un cerc foarte elitic. 
+        
+        <button>
+            <text>Medieval</text>
+            <postback>Medieval</postback>
+        </button>
+       
+        
+        <think><set name = "topic">Castel sau Palat4</set></think>
+        <think><set name="tema">Castel sau Palat4</set></think>
+        
+        
+        </template>
+        
+    </category>
+    
+    <category>
+       <pattern>Medieval</pattern>
+       <template>
+			Chateau d`if este o cladire facuta celebra de Alexandre Dumas in romanul Contele de Monte Cristo, unde ne este prezentata ca pe o inchisoare din care este imposibil sa scapi.Este cel mai popular muzeu din aceasta zona si trebuie neaparat vizitat.
+              <card>
+             <image>https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/fb/cc.jpg</image> 
+            <title>ChÃ¢teau d'If</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.globi.ro/marsilia/obiective-turistice/chateau-d-if</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+
+   
+  
+    
+    <category>
+		
+        <pattern>Lacasuri de cult4</pattern>
+        
+		<template>
+        AstÄzi, oricine poate aprecia frumuseÈea sacrÄ a bisericilor magnifice ale oraÈului, care oferÄ spaÈii de primire pentru refugiul meditativ Èi inspiraÈia spiritualÄ.
+Vizitarea celor mai importante biserici din Nisa oferÄ o privire asupra celei mai bune arte Èi arhitecturi ale oraÈului, precum Èi a vieÈii sale religioase.
+        <button>
+            <text>Catedrala</text>
+            <postback>Catedrala4</postback>
+        </button>
+        <button>
+            <text>Bazilica</text>
+            <postback>Bazilica4</postback>
+        </button>
+        <button>
+            <text>Capela</text>
+            <postback>Capela4</postback>
+        </button>
+        
+        <think><set name = "topic">Lacasuri de cult4</set></think>
+        <think><set name="tema">Lacasuri de cult4</set></think>
+        
+        
+        </template>
+        
+    </category>
+    
+    <category>
+       <pattern>Catedrala4</pattern>
+       <template>
+			Daca ai ajuns in Marsilia, nu prea ai cum sa o ratezi: Notre Dame de La Garde. Biserica romano-bizantina construita in 1854 troneaza peste oras si locuitorii sai, fiind situata pe cel mai inalt deal, al carui nume il si poarta. Notre Dame pare o prelungire a cerului albastru de deasupra Marsiliei. 
+              <card>
+             <image>https://www.globi.ro/assets/styles/445px/public/200414/catedrala-notre-dame-de-la-garde-marsilia.jpg?itok=QIVTFKbO</image> 
+            <title>Catedrala Notre Dame de la Garde </title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.globi.ro/marsilia/obiective-turistice/catedrala-notre-dame-de-la-garde-marsilia</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    <category>
+       <pattern>Bazilica4</pattern>
+       <template>
+			ConstruitÄ Ã®n prima jumÄtate a secolului XX Ã®n stil romano-bizantin, a fost consacratÄ la 5 mai 1947 de cardinalul Roques, arhiepiscopul Rennes, apoi ridicatÄ ca bazilicÄ minorÄ la 17 septembrie 1997 de papa Ioan Paul al II-lea. Edificiul a fost construit pentru a comemora ciuma din 1720 Èi pentru a servi ca memorial al Primului RÄzboi Mondial.
+           <card>
+             <image>https://upload.wikimedia.org/wikipedia/commons/5/5b/Basilique_du_Sacr%C3%A9_Coeur_%C3%A0_Marseille_13.JPG</image> 
+            <title>Basilique du SacrÃ©-CÅur de Marseille</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.tripadvisor.com/Attraction_Review-g187253-d4270717-Reviews-Basilique_du_Sacre_Ceour-Marseille_Bouches_du_Rhone_Provence_Alpes_Cote_d_Azur.html</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   <category>
+       <pattern>Capela4</pattern>
+       <template>
+		Capela Bernardines face parte din fostul convent Bernardines care s-a stabilit aici Ã®n 1751. AceastÄ capelÄ este situatÄ Ã®n cartierul 1, pe Bulevardul Garibaldi.
+           <card>
+             <image>https://upload.wikimedia.org/wikipedia/commons/e/e7/Cour_du_lyc%C3%A9e_Thiers_avec_la_Chapelle_des_Bernardines.JPG</image> 
+            <title>Chapelle des Bernardines</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.religiana.com/bernardines-chapel-marseille-1e</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    
+    
+    
+    <category>
+       <pattern>Parcuri3</pattern>
+       <template>
+		Parcul natural Calanques este un paradis pentru scuba-diving, urcat pe munte, balacit in golfuri magnifice cat si pentru explorarea florei si faunei specifice.
+           <card>
+             <image>https://lh3.googleusercontent.com/p/AF1QipP7FT6vuCfOUBiCIqXa6bYUnfHFO0cMQBVVD0HY=w660-h440-c</image>
+			 <title>Parc National des Calanques</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://medicinistii-calatori.ro/parcul-natural-calanques-o-minune-a-naturii/</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   <category>
+       <pattern>Plaja2</pattern>
+       <template>
+         Este o locatie ideala pentru toate tipurile de activitati, fie cÄ esti Ã®n cÄutare pentru o plimbare romantica, pentru relaxare, poti sta linistit si sa citesti o carte, sa faci sport.
+           <card>
+             <image>https://lh3.googleusercontent.com/p/AF1QipPXw7wk4Hvoc5w5-w4HWcbx0UqylHPOjHRfXwXg=w660-h440-c</image> 
+            <title>Plage du ProphÃ¨te</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.tripadvisor.com/Attraction_Review-g187253-d8522388-Reviews-Plage_du_Prophete-Marseille_Bouches_du_Rhone_Provence_Alpes_Cote_d_Azur.html</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    
+    
+    <category>
+        <pattern>Est</pattern>
+        <than> *  Spune-mi pe ce ai vrea sa te axezi acum.</than>
+        <template>In continuare o sa-ti prezint orasele reprezentative acestei zone. Spune-mi pe care vrei sa-l alegi.
+        
+        <button>
+            <text>Lyon</text>
+            <postback>Lyon</postback>
+        </button>
+        <button>
+            <text>Strasbourg</text>
+            <postback>Strasbourg</postback>
+        </button>
+        
+        
+        <think><set name = "topic">Est</set></think>
+        <think><set name="tema">Est</set></think>
+        
+        </template>
+        
+    </category>
+        <category>
+		
+        <pattern>Lyon</pattern>
+           
+		<template>
+		    <image>https://media.giphy.com/media/l51lO7slFlK1ntohq/giphy.gif</image>
+		     Lyon este recunoscut de departe ca orasul modern prin excelenta. Lyon devine astazi un oras definit de sintagma âget-up-and-goâ, nicidecum de âlie-back-and-restâ cum ar spune englezii, orasul unde nimeni nu sta niciodata.Hai sa incepem, alege cu ce incepem:
+        Ai facut o alegere foarte buna! Alege categoria care te-ar interesa.
+        <button>
+            <text>Arta si cultura</text>
+            <postback>Arta si cultura5</postback>
+        </button>
+        <button>
+            <text>Activitati in aer liber</text>
+            <postback>Activitati in aer liber5</postback>
+        </button>
+		 
+        
+        
+        <think><set name = "topic">Lion</set></think>
+        <think><set name="tema">Lion</set></think>
+        
+        
+        </template>
+        
+    </category>
+     <category>
+		
+        <pattern>Arta si cultura5</pattern>
+        
+		<template>
+		      
+        <button>
+            <text>Muzeu</text>
+            <postback>Muzeu5</postback>
+        </button>
+        <button>
+            <text>Castel sau Palat</text>
+            <postback>Castel sau Palat5</postback>
+        </button>
+		 <button>
+            <text>Lacasuri de cult</text>
+            <postback>Lacasuri de cult5</postback>
+        </button>
+        
+        
+        
+        <think><set name = "topic">Arta si cultura</set></think>
+        <think><set name="tema">Arta si cultura</set></think>
+        
+        
+        </template>
+        
+    </category>
+     <category>
+		
+        <pattern>Activitati in aer liber5</pattern>
+        
+		<template>
+		       Capitala francezÄ oferÄ turiÈtilor nu doar nenumÄrate muzee interesante Èi o arhitecturÄ superbÄ, ci Èi o multitudine de parcuri si grÄdini frumoase, perfecte pentru cÃ¢teva momente de relaxare.
+		       Alege acum ceva ce-ti face placere.
+        <button>
+            <text>Parcuri naturale</text>
+            <postback>prnat</postback>
+        </button>
+        <button>
+            <text>Parcuri de distractii</text>
+            <postback>prdis</postback>
+        </button>
+		 
+        <think><set name = "topic">Activitati in aer liber5</set></think>
+        <think><set name="tema">Activitati in aer liber55</set></think>
+        
+        
+        </template>
+        
+    </category>
+    <category>
+		
+        <pattern>Muzeu5</pattern>
+        
+		<template>
+		       Muzeele joaca un rol foarte important in turismul parizian si daca ar fi sa facem un top al celor mai importante muzee din Lion ne-ar fi tare greu asa ca iti prezint principalele categorii de muzee.
+		       
+        <button>
+            <text>Arta</text>
+            <postback>Arta5</postback>
+        </button>
+        <button>
+            <text>Istorie</text>
+            <postback>Istorie4</postback>
+        </button>
+        <button>
+            <text>Casa memoriala</text>
+            <postback>Casa memoriala4</postback>
+        </button>
+        
+		 
+        <think><set name = "topic">Muzeu5</set></think>
+        <think><set name="tema">Muzeu5</set></think>
+        
+        
+        </template>
+       
+          </category>
+   <category>
+       <pattern>Arta5</pattern>
+       <template>
+          Vizitat anual de peste 130.000 de persoane, este cel mai bun loc pentru a descoperi ultimele tendinte si teme ale artistilor contemporani francezi. Periodic, aici sunt prezentate lucrarile unor artisti straini.
+           <card>
+             <image>https://c8.alamy.com/compit/hwnp1r/francia-rhone-lione-la-cite-internazionale-il-museo-di-arte-contemporanea-hwnp1r.jpg</image> 
+            <title>MusÃ©e d'art contemporain de Lyon</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.tripadvisor.com/Attraction_Review-g187265-d219459-Reviews-Museum_of_Contemporary_Art-Lyon_Rhone_Auvergne_Rhone_Alpes.html</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    <category>
+       <pattern>Istorie4</pattern>
+       <template>
+		Vei explora astfel fiecare faza de constructie, de distrugere si de reconstructie a orasului in cele 37 de Sali de Expozitie special amenajate. Apoi veti vedea evolutia papusilor de la marioneta Guignol la robotul Zaven ParÃ© si veti intelege puternica legatura care se creeaza intre papusarii contemporani si operele lor.           <card>
+             <image>https://lh3.googleusercontent.com/proxy/0i1ibSWpmMHXpIkIkfU2Zfe-8YYUG86zeOqb2s8roVFgVm0pPx8_ntN98_X4sEo5lyVkAAVA8CQT3Sei3eEOp5F6D626i3JuzUXFfgQkoFKLtZTNE_cLvwTs2g0xeBDgM2UWEWiBUP2LpzHcgy9fFQ</image> 
+            <title>MusÃ©e d'Histoire de Lyon</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.tripadvisor.com/Attraction_Review-g187265-d230775-Reviews-Musee_d_Histoire_de_Lyon-Lyon_Rhone_Auvergne_Rhone_Alpes.html</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   
+    <category>
+       <pattern>Casa memoriala4</pattern>
+       <template>
+        Aici se pot gÄsi multe dintre obiectele scriitorului, printre care unele din tinereÅ£e, dar Åi unele pe care le-a avut cu puÅ£in timp Ã®nainte de trecerea sa Ã®n nefiinÅ£Ä.
+           <card>
+             <image>https://media.gettyimages.com/photos/la-maison-darret-de-montluc-lors-du-procs-de-klaus-barbie-le-21-1985-picture-id967012104?s=612x612</image> 
+            <title>Montluc prison</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.tripadvisor.com/Attraction_Review-g187265-d4700724-Reviews-Memorial_National_de_la_Prison_de_Montluc-Lyon_Rhone_Auvergne_Rhone_Alpes.html</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   
+   
+       <category>
+		
+        <pattern>Castel sau Palat5</pattern>
+        
+		<template>
+        O adevÄratÄ reprezentare a rafinamentului francez, palatele Lionien sunt fascinante. Cu un nivel garantat de calitate Èi lux, existÄ doar o mÃ¢nÄ de unitÄÈi care poate obÈine acest rÃ¢vnit titlu. Este o recunoaÈtere care face doar cÃ¢teva persoane fericite Ã®ntr-un cerc foarte elitic. 
+        <button>
+            <text>Medieval</text>
+            <postback>Medieval</postback>
+        </button>
+       
+        
+        <think><set name = "topic">Castel sau Palat5</set></think>
+        <think><set name="tema">Castel sau Palat5</set></think>
+        
+        
+        </template>
+        
+    </category>
+    
+    <category>
+       <pattern>Medieval</pattern>
+       <template>
+		Castelul de la La Motte este situat Ã®n districtul 7 din Lyon, malul stÃ¢ng, Ã®n departamentul RhÃ´ne. Acesta se aflÄ Ã®n apropierea intersecÈiei drumurilor antice de la est Èi sud de Lyon, lÃ¢ngÄ graniÈa dintre DauphinÃ© Èi Lyonnais. Ocupa un mic deal care l-a Ã®ndepÄrtat Ã®n inundaÈii Èi i-a asigurat o vizibilitate bunÄ Ã®nainte de urbanizarea zonei de la GuillotiÃ¨re.
+              <card>
+             <image>https://q-cf.bstatic.com/images/hotel/max1024x768/324/32457650.jpg</image> 
+            <title>ChÃ¢teau de la Motte</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.booking.com/hotel/fr/chac-teau-de-la-motte.ro.html</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    
+   
+  
+    
+    <category>
+		
+        <pattern>Lacasuri de cult5</pattern>
+        
+		<template>
+        AstÄzi, oricine poate aprecia frumuseÈea sacrÄ a bisericilor magnifice ale oraÈului, care oferÄ spaÈii de primire pentru refugiul meditativ Èi inspiraÈia spiritualÄ.
+Vizitarea celor mai importante biserici din Lion oferÄ o privire asupra celei mai bune arte Èi arhitecturi ale oraÈului, precum Èi a vieÈii sale religioase.
+        <button>
+            <text>Catedrala</text>
+            <postback>Catedrala5</postback>
+        </button>
+        <button>
+            <text>Bazilica</text>
+            <postback>Bazilica5</postback>
+        </button>
+        <button>
+            <text>Capela</text>
+            <postback>Capela5</postback>
+        </button>
+        
+        <think><set name = "topic">Lacasuri de cult5</set></think>
+        <think><set name="tema">Lacasuri de cult5</set></think>
+        
+        
+        </template>
+        
+    </category>
+    
+    <category>
+       <pattern>Catedrala5</pattern>
+       <template>
+			Este o catedrala romano-catolica cunoscuta ca "Primatiale", deoarece in 1079 Papa a acordat Arhiepiscopului de Lyon titlul de Primat cu suprematie juridica asupra arhiepiscopiei principale a regatului.
+              <card>
+             <image>https://img.over-blog-kiwi.com/1/47/74/15/20180811/ob_862d44_lyon-cathedrale-saint-jean-baptiste.JPG</image> 
+            <title>CathÃ©drale Saint-Jean-Baptiste</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.portalturism.com/obiectiv-turistic/catedrala-saint-jean-baptiste-lyon-franta</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    <category>
+       <pattern>Bazilica5</pattern>
+       <template>
+			Basilica Notre Dame de Fourviere, o bijuterie arhitectonica comparata adesea cu un tort de nunta datorita ornamentelor sale care o fac sa semene cu Sacre-Coeur din Paris; aceasta a fost construita intre anii 1872-1884 urmand liniile stilurilor gotice si bizantine.
+           <card>
+             <image>https://media-cdn.tripadvisor.com/media/photo-s/04/55/c3/a8/basilique-notre-dame.jpg</image> 
+            <title>La Basilique Notre Dame de FourviÃ¨re</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.fourviere.org/en/discover/notre-dame-de-fourviere/basilica-2/</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   <category>
+       <pattern>Capela5</pattern>
+       <template>
+			A fost consacrata Ã®n 1622. Interiorul este tipic arhitecturii lor Ã®n aceastÄ perioadÄ. Thomas Blanchet Èi Ferdinand Delamonce, la sfÃ¢rÈitul secolului al XVII-lea Èi Ã®nceputul secolului al XVIII-lea, sunt responsabili de modificarea galeriilor Èi a marmurii policromate a naosului Èi a cancelarului.
+           <card>
+             <image>https://media.lyon-france.com/600x600/148350/345184.jpg</image> 
+            <title>Chapelle de la TrinitÃ©</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://en.wikipedia.org/wiki/Chapelle_de_la_Trinit%C3%A9</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    
+    
+    <category>
+       <pattern>prnat</pattern>
+       <template>
+			Parcul TÃªte d'Or din Lyon este cel mai mare parc urban din FranÈa, avÃ¢nd o suprafaÈÄ de 117 ha. Inaugurat Ã®n 1857, are peste 3 milioane de vizitatori anual.Parcul posedÄ peste 8800 de arbori, numeroase pajisti Èi lacuri.
+           <card>
+             <image>https://www.divento.com/18214/parc-de-la-tete-d-or-lyon.jpg</image>
+			 <title>Parcul TÃªte d'Or</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.directbooking.ro/obiectiv-parcul-t%C3%AAte-dor-lyon-946.aspx</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   <category>
+       <pattern>prdis</pattern>
+       <template>
+	   Situat Ã®ntr-o verdeaÈÄ luxuriantÄ din Lyon, parcul  cu activitÄÈi multiple oferÄ 7 trasee Ã®n Ã®nÄlÈime (80 de ateliere Ã®n total!), precum Èi teste de mediu pentru a sensibiliza cei mai tineri sub forma unui meeting interactiv.
+           <card>
+             <image>https://i.ytimg.com/vi/apeHiE8fHb8/maxresdefault.jpg</image> 
+            <title>France Aventures Lyon FourviÃ¨re</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.tripadvisor.com/Attraction_Review-g187265-d3587545-Reviews-France_Aventures_Lyon-Lyon_Rhone_Auvergne_Rhone_Alpes.html</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+	   
+   </category>
+   
+   
+   <category>
+		
+        <pattern>Strasbourg</pattern>
+      
+        
+		<template>
+		    <image>https://media.giphy.com/media/l51lO7slFlK1ntohq/giphy.gif</image>
+		    Strasbourg este nu numai una dintre locatiile unde se desfasoara sedintele Parlamentului European, ci si una dintre destinatiile turistice din Europa ce trebuie trecuta neaparat pe lista de vacante. Tocmai de aceea, va prezentam astazi cateva obiective turistice de care trebuie neaparat sa va bucurati odata ajungi aici.
+        Ai facut o alegere foarte buna! Alege categoria care te-ar interesa.
+        <button>
+            <text>Arta si cultura</text>
+            <postback>Arta si cultura6</postback>
+        </button>
+        <button>
+            <text>Activitati in aer liber</text>
+            <postback>Activitati in aer liber6</postback>
+        </button>
+		 
+        
+        
+        <think><set name = "topic">Strasbourg</set></think>
+        <think><set name="tema">Strasbourg</set></think>
+        
+        
+        </template>
+        
+    </category>
+     <category>
+		
+        <pattern>Arta si cultura6</pattern>
+        
+		<template>
+		    Cultura si arta oraÅului Strasbourg sunt captivante, datoritÄ influenÅ£elor franceze Åi germane. Centrul istoric se mÃ¢ndreÅte cu numeroase clÄdiri ridicate Ã®ntre secolele XVI Åi XVIII, cÃ¢nd oraÅul aparÅ£inea FranÅ£ei.   
+        <button>
+            <text>Muzeu</text>
+            <postback>Muzeu6</postback>
+        </button>
+        <button>
+            <text>Castel sau Palat</text>
+            <postback>Castel sau Palat6</postback>
+        </button>
+		 <button>
+            <text>Lacasuri de cult</text>
+            <postback>Lacasuri de cult6</postback>
+        </button>
+        
+        
+        
+        <think><set name = "topic">Arta si cultura6</set></think>
+        <think><set name="tema">Arta si cultura6</set></think>
+        
+        
+        </template>
+        
+    </category>
+     <category>
+		
+        <pattern>Activitati in aer liber6</pattern>
+        
+		<template>
+		       Dupa Paris, Strasbourg este acum cel mai important oras si din punctul de vedere al activitatilor in aer liber. Este nelipsit de parcuri si gradini care infrumuseteaza aspectul orasului si care se imbina cu cladirile istorice.
+        <button>
+            <text>Parcuri</text>
+            <postback>Parcuri4</postback>
+        </button>
+        <button>
+            <text>Gradina</text>
+            <postback>Gradina</postback>
+        </button>
+		 
+        <think><set name = "topic">Activitati in aer liber6</set></think>
+        <think><set name="tema">Activitati in aer liber6</set></think>
+        
+        
+        </template>
+        
+    </category>
+    <category>
+		
+        <pattern>Muzeu6</pattern>
+        
+		<template>
+		      Muzeele din Strasbourg sunt interesante, prezintÄ colecÅ£ii bogate, lucruri inedite. Ãn mod sigur multe informaÅ£ii se uitÄ, dar existÄ anumite lucruri, simÅ£iri, sau trÄiri care te impresioneazÄ Åi pe care nu le uiÅ£i.
+        <button>
+            <text>Arta</text>
+            <postback>Arta6</postback>
+        </button>
+        <button>
+            <text>Istorie</text>
+            <postback>Istorie5</postback>
+        </button>
+        <button>
+            <text>Stiinta</text>
+            <postback>Stiinta</postback>
+        </button>
+       
+		 
+        <think><set name = "topic">Muzeu6</set></think>
+        <think><set name="tema">Muzeu6</set></think>
+        
+        
+        </template>
+       
+          </category>
+   <category>
+       <pattern>Arta6</pattern>
+       <template>
+          Museul de ArtÄ ModernÄ Åi ContemporanÄ reprezintÄ o colecÅ£ie impresionantÄ Åi fascinantÄ de artÄ modernÄ, inclusiv opere semnate Gustave Dore, Max Ernst, Vassily Kandinsky Åi Jean Arp. Cei ce sunt interesaÅ£i de artÄ, Ã®nsÄ vor sÄ mÄnÃ¢nce la un restaurant bun pe durata vizitei, pot alege ca loc de recreere Biblioteca Muzeului.
+           <card>
+             <image>https://www.portalturism.com/uploads/picture/image/246640/large_muzeul-arta-moderna-strasbourg.jpg</image> 
+            <title>MusÃ©e d'Art Moderne et Contemporain de Strasbourg</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.portalturism.com/obiectiv-turistic/muzeul-de-arta-moderna-si-contemporana-strasbourg-franta</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    <category>
+       <pattern>Istorie5</pattern>
+       <template>
+           Este un muzeu foarte interesant Åi atrÄgÄtor cu multe colecÅ£ii grupate Ã®n douÄ capitole din istoria oraÅului â oraÅul liber din timpul SfÃ¢ntului Imperiu Roman Germanic Åi oraÅul liber regal Åi revoluÅ£ionar.
+		   <card>
+             <image>https://en.musees.strasbourg.eu/documents/218136/775143/musee_historique_jeffowenphotos.jpg/413981f4-ddc2-ad04-8004-77c23deffba4?t=1494582051283</image> 
+            <title>Muzeul de istorie</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.infotour.ro/ghid-turistic/muzee-si-galerii-de-arta/muzeul-de-istorie-din-strasbourg-1627</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   
+    <category>
+       <pattern>Stiinta</pattern>
+       <template>
+       Le Vaisseau este un centru ÈtiinÈific practic, situat Ã®n Strasbourg.Este condus de Consiliul departamental al Bas-Rhinului, care a iniÈiat creaÈia sa Ã®n 2005 si pe langa activitatea de muzeu, educa tinerii in domeniul stiintei prin diferite cursuri de formare.
+           <card>
+             <image>https://media-cdn.tripadvisor.com/media/photo-s/04/5f/e0/70/entree-du-vaisseau-c.jpg</image> 
+            <title>Le Vaisseau</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.tripadvisor.co.uk/Attraction_Review-g187075-d4508260-Reviews-Le_Vaisseau-Strasbourg_Bas_Rhin_Grand_Est.html</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   
+   
+       <category>
+		
+        <pattern>Castel sau Palat6</pattern>
+        
+		<template>
+        ss
+        <button>
+            <text>Regal</text>
+            <postback>Regal4</postback>
+        </button>
+       <button>
+            <text>Istoric</text>
+            <postback>Istoric</postback>
+        </button>
+        
+        <think><set name = "topic">Castel sau Palat5</set></think>
+        <think><set name="tema">Castel sau Palat5</set></think>
+        
+        
+        </template>
+        
+    </category>
+    
+    <category>
+       <pattern>Istoric</pattern>
+       <template>
+        Magnific si impunator, Palatul Rohan a fost odata casa domnitorilor, episcopilor si cardinalilor Casei Rohan.Acest obiectiv turistic din Strasbourg a gazduit, de-a lungul timpului, numeroase personalitati celebre din istoria franceza, printre care Maria Antoinette sau Napoleon.
+            <card>
+			<image>https://www.portalturism.com/uploads/picture/image/29592/large_palatul-rohan-strasbourg.jpg</image> 
+            <title>Palatul Rohan</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.portalturism.com/obiectiv-turistic/palatul-rohan-strasbourg-franta</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    
+   <category>
+       <pattern>Regal4</pattern>
+       <template>
+       O clÄdire imensÄ, ea Èi grÄdinile Ã®nconjurÄtoare, precum Èi grajdurile Ã®nvecinate, sunt un reper deosebit al arhitecturii prusiene din secolul al XIX-lea.
+	   <card>
+             <image>https://upload.wikimedia.org/wikipedia/commons/1/14/Absolute_cathedrale_vue_quais_01.JPG</image> 
+            <title>Palais du Rhin</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://en.wikipedia.org/wiki/Palais_du_Rhin</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    
+   
+  
+    
+    <category>
+		
+        <pattern>Lacasuri de cult6</pattern>
+        
+		<template>
+        AstÄzi, oricine poate aprecia frumuseÈea sacrÄ a bisericilor magnifice ale oraÈului, care oferÄ spaÈii de primire pentru refugiul meditativ Èi inspiraÈia spiritualÄ.
+Vizitarea celor mai importante biserici din Strasbourg oferÄ o privire asupra celei mai bune arte Èi arhitecturi ale oraÈului, precum Èi a vieÈii sale religioase.
+        <button>
+            <text>Catedrala</text>
+            <postback>Catedrala6</postback>
+        </button>
+        <button>
+            <text>Bazilica</text>
+            <postback>Bazilica6</postback>
+        </button>
+        <button>
+            <text>Capela</text>
+            <postback>Capela6</postback>
+        </button>
+        
+        <think><set name = "topic">Lacasuri de cult6</set></think>
+        <think><set name="tema">Lacasuri de cult6</set></think>
+        
+        
+        </template>
+        
+    </category>
+    
+    <category>
+       <pattern>Catedrala6</pattern>
+       <template>
+        Impunatoarea Catedrala Notre-Dame din Strasbourg a fost cea mai inalta cladire din lume timp de 227 de ani, cam pana in anul 1874.De fapt, cladirea inca isi mai pastreaza acest titlu onorific, fiind cea de-a sasea cea mai inalta biserica din lume.
+		<card>
+             <image>https://upload.wikimedia.org/wikipedia/commons/3/3d/Cath%C3%A9drale_Strasbourg.jpg</image> 
+            <title>Catedrala Notre-Dame Strasbourg</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>http://amfostacolo.ro/im.php?id=8890</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    <category>
+       <pattern>Bazilica6</pattern>
+       <template>
+        Este vizitata de numerosi turisti in fiecare an, atrasi de frumusetea sa si de arhitectura in stil gotic. 
+        <card>
+             <image>https://upload.wikimedia.org/wikipedia/commons/5/5c/Marienthal_NotreDame03.JPG</image> 
+            <title>Basilica Notre-Dame de Marienthal</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://en.wikipedia.org/wiki/Basilique_Notre-Dame_de_Marienthal</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   <category>
+       <pattern>Capela6</pattern>
+       <template>
+Biserica Saint-Jean din Strasbourg este o bisericÄ catolicÄ dedicatÄ SfÃ¢ntului Ioan BotezÄtorul. Este situat pe Quai Saint-Jean, Ã®n cartierul Gare.
+ClÄdirea a fost catalogatÄ ca monument istoric Ã®ncÄ din 21 februarie 1946
+           <card>
+             <image>https://www.archi-wiki.org/images/thumb/2/2b/13_quai_Saint_Jean_Strasbourg_510.jpg/300px-13_quai_Saint_Jean_Strasbourg_510.jpg</image> 
+            <title>Ãglise Saint-Jean</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>http://www.biserica-strasbourg.fr/prezentare-biserica/</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    
+    
+    <category>
+       <pattern>Parcuri4</pattern>
+       <template>
+        Parcul Orangerie este situat in cartierul Orangerie, chiar langa institutiile europene. Parcul Orangerie a fost amenajat prin secolul al XVIII-lea.
+In timpul Revolutiei Franceze, Strasbourgul mai era cunoscut si sub numele de Orasul Portocalilor; aici aflandu-se peste 140 de portocali. Din acea perioada au supravietuit numai trei portocali.
+		<card>
+             <image>https://www.visitstrasbourg.fr/wp-content/uploads/imgsit/P-85293-F223009094_le-parc-de-l-orangerie-strasbourg.jpg</image>
+			 <title>Parcul Orangerie</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.infotour.ro/ghid-turistic/gradini-si-parcuri/parcul-orangerie-din-strasbourg-1618</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   <category>
+       <pattern>Gradina</pattern>
+       <template>
+         Este o gradina publica transfrontaliera Ã®ntre oraÈul Strasbourg din FranÈa Èi oraÈul Kehl din Germania. Este amplasat pe ambele pÄrÈi ale Rinului cu o pasarela pentru conectarea celor douÄ pÄrÈi.
+		 
+		 <card>
+             <image>https://strasbourgdeuxrives.eu/wp-content/uploads/2017/01/credits-adeus-1280x875.jpg</image> 
+            <title>Jardin des Deux Rives</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.infotour.ro/ghid-turistic/gradini-si-parcuri/jardin-des-deux-rives-din-strasbourg-1624</url>
+                        </button>
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+  
+  
+  <category>
+        <pattern>Vest</pattern>
+        
+        <template>In continuare o sa-ti prezint orasele reprezentative acVestei zone. Spune-mi pe care vrei sa-l alegi.
+        
+        <button>
+            <text>Bordeaux</text>
+            <postback>Bordeaux</postback>
+        </button>
+        <button>
+            <text>Nantes</text>
+            <postback>Nantes</postback>
+        </button>
+        
+        
+        <think><set name = "topic">Vest</set></think>
+        <think><set name="tema">Vest</set></think>
+        
+        </template>
+        
+    </category>
+        <category>
+		
+        <pattern>Bordeaux</pattern>
+       
+        
+		<template><image>https://media.giphy.com/media/l41lO7slFlK1ntohq/giphy.gif</image>
+		Pe malul rÃ¢ului Garonne , nu departe de locul unde acesta se varsÄ Ã®n Oceanul Atlantic , se aflÄ Bordeaux , unul dintre oraÈele cele mai importante ale FranÈei . Numit Perle de l âAquitaine, datoritÄ arhitecturii superbe , Bordeaux a cunoscut o dezvoltare Ã®nfloritoare Ã®n timpul epocii de aur a secolului al XVIII-lea prin comerÈ , Ã®n special cel cu vin .
+		 Ai facut o alegere foarte buna! Alege categoria care te-ar interesa.   
+		  
+        <button>
+            <text>Arta si cultura</text>
+            <postback>Arta si cultura7</postback>
+        </button>
+        <button>
+            <text>Activitati in aer liber</text>
+            <postback>Activitati in aer liber7</postback>
+        </button>
+		 
+        
+        
+        <think><set name = "topic">Bordeaux</set></think>
+        <think><set name="tema">Bordeaux</set></think>
+        
+        
+        </template>
+        
+    </category>
+     <category>
+		
+        <pattern>Arta si cultura7</pattern>
+        
+		<template>
+		 
+		 Centrul istoric al oraÅului este Ã®nscris Ã®n patrimoniul mondial Unesco, fiind caracterizat ca fiind âun uimitor ansamblu urban Åi arhitectural specific secolului XVIIIâ. Bordeaux mai este considerat Åi âOraÅul Artei Åi Istorieiâ.    
+        Ce alegi?
+		<button>
+            <text>Muzeu</text>
+            <postback>Muzeu7</postback>
+        </button>
+        <button>
+            <text>Castel sau Palat</text>
+            <postback>Castel sau Palat7</postback>
+        </button>
+		 <button>
+            <text>Lacasuri de cult</text>
+            <postback>Lacasuri de cult7</postback>
+        </button>
+        
+        
+        
+        <think><set name = "topic">Arta si cultura7</set></think>
+        <think><set name="tema">Arta si cultura7</set></think>
+        
+        
+        </template>
+        
+    </category>
+     <category>
+		
+        <pattern>Activitati in aer liber7</pattern>
+        
+		<template>
+		    Bordeaux este unul dintre cele mai importante zone cu arhitecturÄ urbanÄ de secol XVIII din Europa, fiind un magnet pentru turiÅti Åi casele de producÅ£ie cinematograficÄ atragand pe langa frumusetea cladirilor, ci si frumusetea parcurilor si gradinilor.    
+        <button>
+            <text>Gradina</text>
+            <postback>Gradina2</postback>
+        </button>
+        <button>
+            <text>Parc</text>
+            <postback>Parc</postback>
+        </button>
+		 
+        <think><set name = "topic">Activitati in aer liber7</set></think>
+        <think><set name="tema">Activitati in aer liber7</set></think>
+        
+        
+        </template>
+        
+    </category>
+    <category>
+		
+        <pattern>Muzeu7</pattern>
+        
+		<template>
+		       Muzeele joaca un rol  important in turismul parizian si daca ar fi sa facem un top al celor mai importante muzee din Bordeaux ne-ar fi tare greu asa ca iti prezint principalele categorii de muzee.
+		       
+        <button>
+            <text>Arta</text>
+            <postback>Arta7</postback>
+        </button>
+        <button>
+            <text>Istorie</text>
+            <postback>Istorie6</postback>
+        </button>
+        <button>
+            <text>Cetate</text>
+            <postback>Cetatte</postback>
+        </button>
+        
+		 
+        <think><set name = "topic">Muzeu7</set></think>
+        <think><set name="tema">Muzeu7</set></think>
+        
+        
+        </template>
+       
+          </category>
+   <category>
+       <pattern>Arta7</pattern>
+       <template>
+           MusÃ©e des Beaux-Arts, din Jardin de la Mairie (in spatele Primariei), Bordeaux, se mandreste cu o colectie splendida de lucrari, din secolele 15-20, ai caror autori poarta nume vibrante in istoria picturii: Titian, Perugino, Veronese, Van Dyck.
+           <card>
+             <image>https://upload.wikimedia.org/wikipedia/commons/7/73/Bordeaux_Mus%C3%A9e_des_Beaux_Arts_14.JPG</image> 
+            <title>MusÃ©e des Beaux-Arts</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.portalturism.com/obiectiv-turistic/muzeul-de-arte-frumoase-bordeaux-franta</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    <category>
+       <pattern>Istorie6</pattern>
+       <template>
+         MusÃ©e dâAquitaine este unul dintre cele mai mari muzee de istorie francezÄ din afara Parisului. Sculpturile unor oameni celebri de pe fronton Ã®ntÃ¢mpinÄ vizitatorii Michel de Montaigne a scris totuÈi âcÃ¢nd se spune Èi se face totul, singura glorie pe care am gÄsit-o Ã®n viaÈa mea este sÄ o fi trÄit Ã®n paceâ
+		   <card>
+             <image>https://upload.wikimedia.org/wikipedia/commons/6/6d/Mus%C3%A9e_Aquitaine.JPG </image> 
+            <title>	MusÃ©e dâAquitaine</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.bordeaux-tourism.co.uk/offre/fiche/musee-d-aquitaine/PCUAQU033FS00018</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   
+    <category>
+       <pattern>Cetate</pattern>
+       <template>
+       Cetatea vinului prezintÄ pe 3.000 m2 o expoziÅ£ie permanentÄ Ã®n care descoperi cum a evoluat vinul de-a lungul secolelor, pe diversele continente; vorbim Ã®n aceastÄ expoziÅ£ie despre istorie, geografie, artÄ, despre felul cum se face vinul dar Åi cum este utilizat azi de marii chefi.
+	   <card>
+             <image>https://archello.s3.eu-central-1.amazonaws.com/images/2017/07/04/2775476945643f4c0c05fo.1507281512.3448.jpg</image> 
+            <title>Cite du vin</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>http://www.dozadebine.ro/cetatea-vinului-de-la-bordeaux/</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   
+   
+       <category>
+		
+        <pattern>Castel sau Palat7</pattern>
+        
+		<template>
+        O adevÄratÄ reprezentare a rafinamentului francez, palatele Bordeauxien sunt fascinante. Cu un nivel garantat de calitate Èi lux, existÄ doar o mÃ¢nÄ de unitÄÈi care poate obÈine acVest rÃ¢vnit titlu. Veste o recunoaÈtere care face doar cÃ¢teva persoane fericite Ã®ntr-un cerc foarte elitic. 
+        <button>
+            <text>Regal</text>
+            <postback>Regal7</postback>
+        </button>
+        <button>
+            <text>Medieval</text>
+            <postback>Medieval2</postback>
+        </button>
+       
+        
+        <think><set name = "topic">Castel sau Palat7</set></think>
+        <think><set name="tema">Castel sau Palat7</set></think>
+        
+        
+        </template>
+        
+    </category>
+    
+    <category>
+       <pattern>Regal7</pattern>
+       <template>
+        Cladirea este inconjurata de gradini frumoase in stil englezesc, datand din 1882. Pe fiecare laterala a gradinii din spate, exista doua aripi, care au fost construite in 1880 pentru a gazdui Muzeul de Arte Frumoase.
+		<card>
+             <image>https://live.staticflickr.com/6013/5952331136_e288d0b71f_b.jpg</image> 
+            <title>Palatul Rohan</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.directbooking.ro/obiectiv-palatul-rohan-bordeaux-941.aspx</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    <category>
+       <pattern>Medieval2</pattern>
+       <template>
+			Autentic castel medieval din 1305. De Ã®ndatÄ ce a fost ales ca papÄ (Ã®n 1305), Bertrand de Goth a construit acest castel fortificat, unde s-a nÄscut la Villandraut. Noua sa reÈedinÈÄ a combinat sisteme elaborate de apÄrare cu elemente rafinate ale condiÈiilor de viaÈÄ. 
+           <card>
+             <image>https://medias.otbor.vm.aiprod.com/original/PCUAQU033FS0002P/0-chateau-villandraut-sud-gironde-w.jpg</image> 
+            <title>Chateau de Villandraut</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.tripadvisor.com/Attraction_Review-g1055937-d6611947-Reviews-Chateau_de_Villandraut-Villandraut_Gironde_Nouvelle_Aquitaine.html</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   
+  
+    
+    <category>
+		
+        <pattern>Lacasuri de cult7</pattern>
+        
+		<template>
+        AstÄzi, oricine poate aprecia frumuseÈea sacrÄ a bisericilor magnifice ale oraÈului, care oferÄ spaÈii de primire pentru refugiul meditativ Èi inspiraÈia spiritualÄ.
+Vizitarea celor mai importante biserici din Bordeaux oferÄ o privire asupra celei mai bune arte Èi arhitecturi ale oraÈului, precum Èi a vieÈii sale religioase.
+        <button>
+            <text>Catedrala</text>
+            <postback>Catedrala7</postback>
+        </button>
+        <button>
+            <text>Bazilica</text>
+            <postback>Bazilica7</postback>
+        </button>
+        <button>
+            <text>Capela</text>
+            <postback>Capela7</postback>
+        </button>
+        
+        <think><set name = "topic">Lacasuri de cult7</set></think>
+        <think><set name="tema">Lacasuri de cult7</set></think>
+        
+        
+        </template>
+        
+    </category>
+    
+    <category>
+       <pattern>Catedrala7</pattern>
+       <template>
+         Catedrala SfÃ¢ntul Andrei , unul dintre templele cele mai vechi ale oraÈului , construit Ã®ntre secolele XII-lea Èi al XVI-lea Ã®n stil gotic . Aici au avut loc nunÈi regale ; cea dintre Leonor de Aquitania Èi Luis al XVII-lea Èi mai tÃ¢rziu Ã®ntre Ana de Austria Èi Luis al XIII-lea .
+		 <card>
+             <image>https://previews.123rf.com/images/designbydx/designbydx1411/designbydx141100441/33657622-night-time-view-cathedrale-saint-andre-bordeaux-france.jpg</image> 
+            <title>CathÃ©drale Saint-AndrÃ© de Bordeaux</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.portalturism.com/obiectiv-turistic/catedrala-sfantul-andrei-bordeaux-franta</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    <category>
+       <pattern>Bazilica7</pattern>
+       <template>
+        Bazilica Saint Severinus (sau Basilique Saint-Seurin de Bordeaux, Ã®n francezÄ) este un edificiu religios construit la Bordeaux Ã®n zorii secolului al XI-lea. [1] DupÄ ce a fost clasificat ca monument istoric pe lista din 1840, a fost apoi Ã®nscris ca Patrimoniu Mondial UNESCO Ã®n 1998, datoritÄ faptului cÄ este Èeful unuia dintre cÄile SfÃ¢ntului Iacob de Compostela.
+		<card>
+             <image>https://files.structurae.net/files/photos/64/gironde/bordeaux_saint_seurin_1.jpg</image> 
+            <title>Basilica of Saint Severinus of Bordeaux</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.tripadvisor.com/Attraction_Review-g187079-d8670442-Reviews-Basilique_Saint_Seurin-Bordeaux_Gironde_Nouvelle_Aquitaine.html</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   <category>
+       <pattern>Capela7</pattern>
+       <template>
+        Este un alt monument important al oraÈului , construitÄ de iacobini Ã®n stil baroc la sfÃ¢rÈitul secolului al XVII-lea ; intrarea ei a fost scenariul multor filme de epocÄ . Interiorul bisericii este format dintr-o navÄ Ã®nconjuratÄ de capele cu o cupola Ã®mpodobitÄ cu frumoase vitralii .
+		<card>
+             <image>https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Bordeaux_-_Eglise_Notre-Dame_1.jpg/1200px-Bordeaux_-_Eglise_Notre-Dame_1.jpg</image> 
+            <title>Eglise Notre Dame</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.tripadvisor.com/Attraction_Review-g187079-d219049-Reviews-Notre_Dame_Church_Eglise_Notre_Dame_la_Grande-Bordeaux_Gironde_Nouvelle_Aquitaine.html</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    
+  
+    
+    <category>
+       <pattern>Parc</pattern>
+       <template>
+       
+		Parcul de la Bordeaux acoperÄ o suprafaÈÄ de 28 de hectare, ceea ce contribuie Ã®n mare mÄsurÄ la sentimentul cÄ se poate experimenta destul de repede pentru a se simÈi puÈin âca Ã®n mediul ruralâ.
+	   <card>
+             <image>https://www.bordeaux-tourism.co.uk/var/ezwebin_site/storage/images/media/images/running-parcs/216087-1-eng-US/running-parcs.jpg</image>
+                  <title>Parc bordelais</title>     
+					   <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.tripadvisor.com/Attraction_Review-g187079-d6416877-Reviews-Parc_Bordelais-Bordeaux_Gironde_Nouvelle_Aquitaine.html</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   <category>
+       <pattern>Gradina2</pattern>
+       <template>
+			Gradina publica a fost draga inimilor oamenilor Ã®ncÄ de la crearea sa Ã®n 1746. Un veritabil âplÄmÃ¢n verdeâ Ã®n centrul oraÈului, cele 11 hectare de iarbÄ, copaci, flori Èi plante includ, de asemenea, un loc de joacÄ pentru copii Èi faimosul Guignol Spectacol de pÄpuÈi GuÃ©rin.
+		<card>
+             <image>https://medias.otbor.vm.aiprod.com/original/PCUAQU033FS00009/11-Jardin-Public---Credit-Sophie-Duboscq--44-.jpg</image> 
+            <title>Jardin Public</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.infotour.ro/ghid-turistic/gradini-si-parcuri/gradina-botanica-din-bordeaux-1313</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    
+      <category>
+		
+        <pattern>Nantes</pattern>
+                
+		<template>
+		    <image>https://media.giphy.com/media/l41lO7slFlK1ntohq/giphy.gif</image>
+		  Profitand de deschiderea spre mare, Nantes s-a dezvoltat de-a lungul timpului, devenind unul dintre cele mai importante porturi franceze, fiind astazi considerat centrul metropolitan al vestului Frantei.  
+        Ai facut o alegere foarte buna! Alege categoria care te-ar interesa.
+        <button>
+            <text>Arta si cultura</text>
+            <postback>Arta si cultura8</postback>
+        </button>
+        <button>
+            <text>Activitati in aer liber</text>
+            <postback>Activitati in aer liber8</postback>
+        </button>
+		 
+        
+        
+        <think><set name = "topic">Nantes</set></think>
+        <think><set name="tema">Nantes</set></think>
+        
+        
+        </template>
+        
+    </category>
+    <category>
+		
+        <pattern>Arta si cultura8</pattern>
+        
+		<template>
+		      O alegere foarte buna. Nantes este un important centru cultural. Este cunoscut si pentru muzeele lui, catedrale si deferite castele.
+		      Acum spune-mi, in aceasta calatorie, ce te-ar interesa mai mult sa vezi?
+        <button>
+            <text>Muzeu</text>
+            <postback>Muzeu8</postback>
+        </button>
+        <button>
+            <text>Castel sau Palat</text>
+            <postback>Castel sau Palat8</postback>
+        </button>
+		 <button>
+            <text>Lacasuri de cult</text>
+            <postback>Lacasuri de cult8</postback>
+        </button>
+        
+        
+        
+        <think><set name = "topic">Arta si cultura8</set></think>
+        <think><set name="tema">Arta si cultura8</set></think>
+        
+        
+        </template>
+        
+    </category>
+    <category>
+		
+        <pattern>Activitati in aer liber8</pattern>
+        
+		<template>
+		  Pe langa manifestarile culturale gazduite, Nantes are si parcuri/gradini pline de culoare perfecte pentru activitati recreationale diferite.Eu iti propun cate una din fiecare.Alege ce iti place: 
+        <button>
+            <text>Gradina</text>
+            <postback>Gradina3</postback>
+        </button>
+        <button>
+            <text>Parc</text>
+            <postback>Parc2</postback>
+        </button>
+		 
+        <think><set name = "topic">Activitati in aer liber8</set></think>
+        <think><set name="tema">Activitati in aer liber8</set></think>
+        
+        
+        </template>
+        
+    </category>
+    
+    <category>
+		
+        <pattern>Muzeu8</pattern>
+        
+		<template>
+		       Muzeele reprezinta un sprijin important in turismul orasului si daca ar fi sa facem un top al celor mai importante muzee din Nantes ar fi tare greu asa ca iti prezint principalele categorii de muzee.
+		       Ce preferi?
+        <button>
+            <text>Arta</text>
+            <postback>Arta8</postback>
+        </button>
+        <button>
+            <text>Istorie</text>
+            <postback>Istorie7</postback>
+        </button>
+        <button>
+            <text>Cetate</text>
+            <postback>Cetatte</postback>
+        </button>
+        
+		 
+        <think><set name = "topic">Muzeu8</set></think>
+        <think><set name="tema">Muzeu8</set></think>
+        
+        
+        </template>
+       
+          </category>
+          <category>
+       <pattern>Arta8</pattern>
+       <template>
+          MusÃ©e Jules Verne este un muzeu dedicat scriitorului francez Jules Verne. Este situat Ã®n oraÈul Nantes, FranÈa Èi a fost deschis Ã®n 1978 pentru a marca 150 de ani de la naÈterea lui Verne.  
+           <card>
+             <image>https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Musee_Jules_Vernes_-_Butte_Saint-Anne_-_Nantes.jpg/1200px-Musee_Jules_Vernes_-_Butte_Saint-Anne_-_Nantes.jpg</image> 
+            <title>Muzeul Jules Verne</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.infotour.ro/ghid-turistic/muzee-si-galerii-de-arta/muzeul-jules-verne-din-nantes-1225</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   <category>
+       <pattern>Istorie7</pattern>
+       <template>
+           Ãn inima cartierului Graslin din Nantes Èi la cÃ¢Èiva paÈi de Passage Pommeraye Èi ThÃ©Ã¢tre Graslin, Muzeul Dobree (MusÃ©e DobrÃ©e) este un punct de reper istoric Ã®n sine, adÄpostit Ã®ntr-un palat neo-medieval impresionant. Numit dupÄ colecÈionarul privat Thomas DobrÃ©e, muzeul gÄzduieÈte o imensÄ colecÈie de artÄ Èi artefacte, printre care unele sculpturi romantice magnifice, tapiserii antice, mobilier antic Èi unele descoperiri interesante egiptene Èi pre-columbiene.
+		   
+		   <card>
+             <image>https://www.loirebybike.co.uk/wp-content/uploads/2020/01/musee-dobree-nantes-44-pcu-1.jpg</image> 
+            <title>MusÃ©e Dobree</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.infotour.ro/ghid-turistic/muzee-si-galerii-de-arta/muzeul-dobree-din-nantes-1224</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   
+   <category>
+		
+        <pattern>Castel sau Palat8</pattern>
+        
+		<template>
+        
+		<button>
+            <text>Regal</text>
+            <postback>Regal7</postback>
+        </button>
+        
+        
+        <think><set name = "topic">Castel sau Palat8</set></think>
+        <think><set name="tema">Castel sau Palat8</set></think>
+        
+        
+        </template>
+        
+    </category>
+    
+    <category>
+       <pattern>Regal7</pattern>
+       <template>
+        Este una din bijuteriile patrimoniului nantez care a fost rÃ¢nd pe rÃ¢nd reÈedinÈÄ a ducilor, fortÄreaÈÄ dar Èi Ã®nchisoare regalÄ, cazarmÄ, chiar. Arhitectural, castelul cu cele 7 turnuri (dintre care turnul Coroanei de aur cu lucarne monumentale) este o joncÈiune Ã®ntre goticul flamboaiant Èi renaÈterea italianÄ. Cele 32 de Ã®ncÄperi ale castelului gÄzduiesc Muzeul de Istorie din Nantes.
+		<card>
+             <image>https://destepti.ro/wp-content/uploads/2016/08/Ch%C3%A2teau-des-ducs-de-Bretagne.jpg</image> 
+            <title>	Castelul Ducilor</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>http://www.magazin.ro/content/view/14979/7/</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    <category>
+		
+        <pattern>Lacasuri de cult8</pattern>
+        
+		<template>
+        AstÄzi, oricine poate aprecia frumuseÈea sacrÄ a bisericilor magnifice ale oraÈului, care oferÄ spaÈii de primire pentru refugiul meditativ Èi inspiraÈia spiritualÄ.
+Vizitarea celor mai importante biserici din Nantes oferÄ o privire asupra celei mai bune arte Èi arhitecturi ale oraÈului, precum Èi a vieÈii sale religioase.
+	Spre ce inclini?
+        <button>
+            <text>Catedrala</text>
+            <postback>Catedrala8</postback>
+        </button>
+        <button>
+            <text>Bazilica</text>
+            <postback>Bazilica8</postback>
+        </button>
+        <button>
+            <text>Capela</text>
+            <postback>Capela8</postback>
+        </button>
+        
+        <think><set name = "topic">Lacasuri de cult8</set></think>
+        <think><set name="tema">Lacasuri de cult8</set></think>
+        
+        
+        </template>
+        
+    </category>
+    <category>
+       <pattern>Catedrala8</pattern>
+       <template>
+       Catedrala din Nantes, sau Catedrala Sf. Petru Èi Sf. Paul din Nantes (francezÄ: CathÃ©drale Saint-Pierre-et-Saint-Paul de Nantes), este o bisericÄ romano-catolicÄ situatÄ Ã®n Nantes, Èara de la Loira, FranÈa. Catedrala este Ã®n tradiÈia arhitecturalÄ goticÄ.
+       <card>
+             <image>https://img.travelerinformation.info/img/dostoprimechatelnosti-nanta-spisok-foto-i-opisanie.jpg</image> 
+            <title>Catedrala Sf. Petru si Pavel</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.infotour.ro/ghid-turistic/catedrale-si-biserici/catedrala-sfantul-paul-din-nantes-1223</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    <category>
+       <pattern>Bazilica8</pattern>
+       <template>
+        Bazilica Sf. Donatian Èi Sf. Rogatian este o bazilicÄ minorÄ romano-catolicÄ din Nantes, FranÈa. Biserica a fost construitÄ la sfÃ¢rÈitul secolului al XIX-lea Èi este dedicatÄ sfinÈilor Donatian Èi Rogatian. A fost ridicat la rangul de bazilicÄ minorÄ Ã®n 1889.
+		<card>
+             <image>https://upload.wikimedia.org/wikipedia/commons/4/49/Basilica_S._Donatiani_et_S._Rogatiani_Martyrum.jpg</image> 
+            <title>Basilica of St. Donatian and St. Rogatian</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://en.wikipedia.org/wiki/Basilica_of_St._Donatian_and_St._Rogatian</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   <category>
+       <pattern>Capela8</pattern>
+       <template>
+        Capela Oratorului este o clÄdire religioasÄ din secolul al XVII-lea, situatÄ Ã®n Nantes, Ã®n FranÈa.ÃncorporatÄ Ã®n hotelul Lelasseur Ã®n 1775, aceastÄ capelÄ a fost clasificatÄ ca monument istoric Ã®n 1952. Nu mai este dedicatÄ sÄrbÄtorii cultului, a devenit o anexÄ a Muzeului de Arte al oraÈului.
+		<card>
+             <image>https://www.guide-tourisme-france.com/PHOTHEME/REGION/T26911.jpg</image> 
+            <title>Chapelle de l'Oratoire</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.tripadvisor.com/Attraction_Review-g187198-d7051872-Reviews-Chapelle_de_l_Oratoire-Nantes_Loire_Atlantique_Pays_de_la_Loire.html</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+   
+    <category>
+       <pattern>Parc2</pattern>
+       <template>
+       Un fost âparc privat pentru burgheziâ Èi are tot farmecul unui parc din Londra. Aici au fost plantaÈi arbori remarcabili, unii au o vechime de sute de ani: copaci de serviciu, cedri Atlas, sequoias. 
+	   <card>
+             <image>https://upload.wikimedia.org/wikipedia/commons/2/23/Nantes_-_Proc%C3%A9_%284%29.jpg</image>
+			 <title>Parc de ProcÃ©</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.tripadvisor.co.uk/Attraction_Review-g187198-d4787706-Reviews-Parc_de_Proce-Nantes_Loire_Atlantique_Pays_de_la_Loire.html</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    <category>
+       <pattern>Gradina3</pattern>
+       <template>
+        AceastÄ insulÄ artificialÄ de 1,7 hectare creatÄ Ã®n 1831, folositÄ iniÈial de tÄbÄcarii Èi tÃ¢mplarii navali, a fost transformatÄ Ã®ntr-o grÄdinÄ Ã®n stil japonez Ã®ncepÃ¢nd cu 1983. Dispunerea rocilor Èi a cÄderilor de apÄ se Ã®mpletesc Ã®ntre 3 clÄdiri de inspiraÈie japonezÄ.
+
+		<card>
+             <image>https://img.over-blog-kiwi.com/0/56/26/60/20170517/ob_bf67e9_jardin-japonais-nantes.JPG</image> 
+            <title>Gradina Ile de Versailles</title>
+                         <button>
+                            <text>Mai multe detalii</text>
+                            <url>https://www.infotour.ro/ghid-turistic/gradini-si-parcuri/gradina-ile-de-versailles-din-nantes-1231</url>
+                        </button>
+                        
+                        <button>
+                            <text>AÈ dori sa vad si altceva</text>
+                            <postback>altcv</postback>
+                        </button>
+               
+           </card>
+       </template>
+   </category>
+    
+          
+          
+	 </aiml>   
+      
